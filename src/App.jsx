@@ -1,5 +1,6 @@
 import './App.module.css';
 import Banner from './components/Banner';
+import { Form } from './components/Form/Form';
 import { Header } from './components/Header/Header';
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <>
       <Header />
       <Banner />
+      <Form />
     </>
   )
 }
