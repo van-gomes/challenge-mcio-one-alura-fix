@@ -1,0 +1,10 @@
+.footer {
+    background-color: #000000E5;
+}
+
+.footer_info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}

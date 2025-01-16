@@ -1,5 +1,6 @@
 import './App.module.css';
 import Banner from './components/Banner';
+import Footer from './components/Footer';
 import { Form } from './components/Form/Form';
 import { Header } from './components/Header/Header';
 
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <Banner />
       <Form />
+      <Footer />
     </>
   )
 }
