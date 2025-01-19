@@ -1,0 +1,12 @@
+.form {
+    display: flex;
+    justify-content: center;
+    margin: 80px 0;
+}
+
+.form form {
+    width: 80%;
+    padding: 36px 64px;
+    border-radius: 20px;
+    background-color: #000000;
+}
