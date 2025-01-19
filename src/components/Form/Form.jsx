@@ -1,3 +1,4 @@
+import Button from '../Button';
 import { DropdownList } from '../DropdownList/DropdownList';
 import TextField from '../TextField';
 import styles from './Form.module.css';
@@ -21,6 +22,8 @@ export const Form = () => {
                 <TextField label="Imagem" type="text" placeholder="Digite o link do imagem" />
                 <TextField label="Video" type="text" placeholder="Digite o link do video" />
                 <TextField label="Descrição" type="text" placeholder="Sobre o que é esse vídeo?" />
+                <Button>GUARDAR</Button>
+                <Button>LIMPAR</Button>
             </form>
         </section>
     );
