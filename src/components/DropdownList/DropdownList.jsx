@@ -1,11 +1,11 @@
 import PropTypes from "prop-types";
 
-export const DropdownList = (props) => {
+export const DropdownList = ({ label, itens, value, aoAlterado, obrigatorio = false }) => {
   return (
     <div>
-      <label>{props.label}</label>
-      <select>
-        {props.itens.map((item) => (
+      <label>{label}</label>
+      <select required={obrigatorio} value={value} onChange={evento => aoAlterado(evento.target.value)}>
+        {itens.map((item) => (
           <option key={item.id}>
             {item.name}
           </option>
@@ -17,10 +17,13 @@ export const DropdownList = (props) => {
 
 DropdownList.propTypes = {
   label: PropTypes.string.isRequired,
-  itens: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      name: PropTypes.string.isRequired,
-    })
-  ).isRequired,
+  itens: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired
+  })).isRequired,
+  value: PropTypes.string.isRequired,
+  aoAlterado: PropTypes.func.isRequired,
+  obrigatorio: PropTypes.bool
 };
+
+

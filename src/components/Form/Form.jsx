@@ -1,10 +1,11 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 import Button from "../Button";
 import { DropdownList } from "../DropdownList/DropdownList";
 import TextField from "../TextField";
 import styles from "./Form.module.css";
 
-export const Form = () => {
+export const Form = ({ aoCadastrar }) => {
   const [title, setTitle] = useState("");
   const [category, setCategory] = useState("");
   const [image, setImage] = useState("");
@@ -17,10 +18,10 @@ export const Form = () => {
     { id: 3, name: "Mobile" },
   ];
 
-  const aoCadastrar = (data) => {
-    console.log("Cadastrando...", data);
-    // Add your logic to handle the data here
-  };
+  // const aoCadastrar = (data) => {
+  //   console.log("Cadastrando...", data);
+  //   // Add your logic to handle the data here
+  // };
 
   const aoSalvar = (event) => {
     event.preventDefault();
@@ -55,6 +56,7 @@ export const Form = () => {
           label="Categoria"
           itens={categories}
           placeholder="Selecione uma categoría"
+          required
         />
         <TextField
           value={image}
@@ -85,4 +87,8 @@ export const Form = () => {
       </form>
     </section>
   );
+};
+
+Form.propTypes = {
+  aoCadastrar: PropTypes.func.isRequired,
 };
