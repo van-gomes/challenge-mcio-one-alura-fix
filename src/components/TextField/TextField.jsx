@@ -1,29 +1,30 @@
 import styles from './TextField.module.css';
 import PropTypes from 'prop-types';
 
-export const TextField = ({ label, type, placeholder, value }) => {
-    const handleInputChange = (event) => {
-        event.preventDefault();
-    }
-
-    return (
-        <div className={styles.container__text_field}>
-            <label>{label}</label>
-            <input 
-                type={type} 
-                placeholder={placeholder} 
-                value={value}
-                onChange={handleInputChange}
-                required
-            />
-        </div>
-    );
-}
+export const TextField = ({
+  label,
+  placeholder,
+  valor,
+  aoAlterado,
+  obrigatorio = false,
+}) => {
+  return (
+    <div className={styles.textField}>
+      <label>{label}</label>
+      <input
+        value={valor}
+        onChange={(evento) => aoAlterado(evento.target.value)}
+        required={obrigatorio}
+        placeholder={placeholder}
+      />
+    </div>
+  );
+};
 
 TextField.propTypes = {
-    label: PropTypes.string.isRequired,
-    type: PropTypes.string,
-    placeholder: PropTypes.string,
-    value: PropTypes.string,
-    onChange: PropTypes.func.isRequired,
+  label: PropTypes.string.isRequired,
+  placeholder: PropTypes.string,
+  valor: PropTypes.string,
+  aoAlterado: PropTypes.func.isRequired,
+  obrigatorio: PropTypes.bool,
 };

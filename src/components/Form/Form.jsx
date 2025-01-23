@@ -17,9 +17,15 @@ export const Form = () => {
     { id: 3, name: "Mobile" },
   ];
 
+  const aoCadastrar = (data) => {
+    console.log("Cadastrando...", data);
+    // Add your logic to handle the data here
+  };
+
   const aoSalvar = (event) => {
     event.preventDefault();
-    console.log({
+    console.log("Salvando...", title, category, image, video, description);
+    aoCadastrar({
       title,
       category,
       image,
@@ -37,7 +43,7 @@ export const Form = () => {
 
         <TextField
           value={title}
-          handleInputChange={(value) => setTitle(value)}
+          aoAlterado={valor => setTitle(valor)}
           label="Titulo"
           type="text"
           placeholder="Ingrese el título"
@@ -45,14 +51,14 @@ export const Form = () => {
         />
         <DropdownList
           value={category}
-          handleInputChange={(value) => setCategory(value)}
+          aoAlterado={valor => setCategory(valor)}
           label="Categoria"
           itens={categories}
           placeholder="Selecione uma categoría"
         />
         <TextField
           value={image}
-          handleInputChange={(value) => setImage(value)}
+          aoAlterado={valor => setImage(valor)}
           label="Imagem"
           type="text"
           placeholder="Digite o link do imagem"
@@ -60,7 +66,7 @@ export const Form = () => {
         />
         <TextField
           value={video}
-          handleInputChange={(value) => setVideo(value)}
+          aoAlterado={valor => setVideo(valor)}
           label="Video"
           type="text"
           placeholder="Digite o link do video"
@@ -68,7 +74,7 @@ export const Form = () => {
         />
         <TextField
           value={description}
-          handleInputChange={(value) => setDescription(value)}
+          aoAlterado={valor => setDescription(valor)}
           label="Descrição"
           type="text"
           placeholder="Sobre o que é esse vídeo?"
