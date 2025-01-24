@@ -1,4 +1,4 @@
-// import { useState } from 'react';
+import { useState } from 'react';
 import './App.module.css';
 import Banner from './components/Banner';
 import Footer from './components/Footer';
@@ -6,11 +6,11 @@ import { Form } from './components/Form/Form';
 import { Header } from './components/Header/Header';
 
 function App() {
-  // const [conteudo, setConteudo] = useState([]);
+  const [conteudos, setConteudo] = useState([]);
 
   const aoCadastrar = (conteudo) => {
     console.log("Cadastrando...", conteudo);
-    // Add your logic to handle the data here
+    setConteudo([...conteudos, conteudo]);
   };
 
   return (
