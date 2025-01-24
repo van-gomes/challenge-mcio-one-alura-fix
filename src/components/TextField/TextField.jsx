@@ -1,11 +1,7 @@
 import styles from './TextField.module.css';
 import PropTypes from 'prop-types';
 
-export const TextField = ({ label, type, placeholder, value, onChange }) => {
-  const handleInputChange = (event) => {
-      onChange(event.target.value);
-  }
-
+export const TextField = ({ label, type, placeholder, value, aoAlterado }) => {
   return (
       <div className={styles.container__text_field}>
           <label>{label}</label>
@@ -13,7 +9,7 @@ export const TextField = ({ label, type, placeholder, value, onChange }) => {
               type={type} 
               placeholder={placeholder} 
               value={value}
-              onChange={handleInputChange}
+              onChange={evento => aoAlterado(evento.target.value)}
               required
           />
       </div>
@@ -25,5 +21,5 @@ TextField.propTypes = {
   type: PropTypes.string,
   placeholder: PropTypes.string,
   value: PropTypes.string,
-  onChange: PropTypes.func.isRequired,
+  aoAlterado: PropTypes.func.isRequired,
 };
