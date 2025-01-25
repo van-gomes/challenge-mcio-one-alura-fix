@@ -5,7 +5,7 @@ import { DropdownList } from "../DropdownList/DropdownList";
 import TextField from "../TextField";
 import styles from "./Form.module.css";
 
-export const Form = ({ aoCadastrar }) => {
+export const Form = ({ onRegister }) => {
   const [title, setTitle] = useState("");
   const [category, setCategory] = useState("");
   const [image, setImage] = useState("");
@@ -18,15 +18,10 @@ export const Form = ({ aoCadastrar }) => {
     { id: 3, name: "Mobile" },
   ];
 
-  // const aoCadastrar = (data) => {
-  //   console.log("Cadastrando...", data);
-  //   // Add your logic to handle the data here
-  // };
-
-  const aoSalvar = (event) => {
+  const onSave = (event) => {
     event.preventDefault();
     console.log("Salvando...", title, category, image, video, description);
-    aoCadastrar({
+    onRegister({
       title,
       category,
       image,
@@ -37,7 +32,7 @@ export const Form = ({ aoCadastrar }) => {
 
   return (
     <section className={styles.form}>
-      <form onSubmit={aoSalvar}>
+      <form onSubmit={onSave}>
         <h1>NOVO VÍDEO</h1>
         <h3>Complete o formulário para criar um novo card de vídeo.</h3>
         <h2>Criar Card</h2>
@@ -90,5 +85,5 @@ export const Form = ({ aoCadastrar }) => {
 };
 
 Form.propTypes = {
-  aoCadastrar: PropTypes.func.isRequired,
+  onRegister: PropTypes.func.isRequired,
 };
