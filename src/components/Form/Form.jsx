@@ -43,7 +43,7 @@ export const Form = ({ onRegister, subject }) => {
           value={category}
           aoAlterado={valor => setCategory(valor)}
           label="Categoria"
-          itens={subject}
+          subject={subject}
           placeholder="Selecione uma categoría"
           required
         />

@@ -4,7 +4,14 @@ import PropTypes from 'prop-types';
 export const Card = ({ name, colorButton, colorBorder }) => {
   return (
     <section className={styles.card} style={{ backgroundColor: colorButton, borderColor: colorBorder }}>
-      <h3>{name}</h3>
+      <h2 className={styles.title}>{name}</h2>
+      <div>
+        <img src='https://github.com/van-gomes.png' />
+      </div>
+      <div>
+        <button className={styles.button}>DELETAR</button>
+        <button className={styles.button}>EDITAR</button>
+      </div>
     </section>
     );
 };
