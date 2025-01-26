@@ -39,7 +39,7 @@ function App() {
     <>
       <Header />
       <Banner />
-      <Form onRegisterNewContent={content => onRegister(content)} />
+      <Form subject={subjects.map(subject => subject.name)} onRegisterNewContent={content => onRegister(content)} />
       {subjects.map((subject) => (<Card key={subject.id} name={subject.name} colorButton={subject.colorButton} colorBorder={subject.colorBorder} />))}
       <Footer />
     </>

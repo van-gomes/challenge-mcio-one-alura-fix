@@ -5,18 +5,12 @@ import { DropdownList } from "../DropdownList/DropdownList";
 import TextField from "../TextField";
 import styles from "./Form.module.css";
 
-export const Form = ({ onRegister }) => {
+export const Form = ({ onRegister, subject }) => {
   const [title, setTitle] = useState("");
   const [category, setCategory] = useState("");
   const [image, setImage] = useState("");
   const [video, setVideo] = useState("");
   const [description, setDescription] = useState("");
-
-  const categories = [
-    { id: 1, name: "Front-end" },
-    { id: 2, name: "Back-end" },
-    { id: 3, name: "Mobile" },
-  ];
 
   const onSave = (event) => {
     event.preventDefault();
@@ -49,7 +43,7 @@ export const Form = ({ onRegister }) => {
           value={category}
           aoAlterado={valor => setCategory(valor)}
           label="Categoria"
-          itens={categories}
+          itens={subject}
           placeholder="Selecione uma categoría"
           required
         />
@@ -86,4 +80,5 @@ export const Form = ({ onRegister }) => {
 
 Form.propTypes = {
   onRegister: PropTypes.func.isRequired,
+  subject: PropTypes.array.isRequired,
 };
