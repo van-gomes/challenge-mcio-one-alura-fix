@@ -26,24 +26,48 @@ function App() {
       colorButton: "#FFBA05",
       colorBorder: "#FFBA05"
     }
-  ]
+  ];
 
   const [contents, setContents] = useState([]);
 
   const onRegister = (content) => {
     console.log("Cadastrando...", content);
-    setContents([...contents, content]);
+
+    // Encontrando a categoria selecionada no array subjects para pegar as cores
+    const categoryData = subjects.find(subject => subject.name === content.category);
+
+    // Se a categoria for encontrada, usamos as cores dela
+    const newContent = {
+      id: Date.now().toString(),
+      title: content.title,
+      category: content.category,
+      image: content.image,
+      video: content.video,
+      description: content.description,
+      colorButton: categoryData ? categoryData.colorButton : "#FFBA05", // Cor padrão se não encontrar
+      colorBorder: categoryData ? categoryData.colorBorder : "#FFBA05"  // Cor padrão se não encontrar
+    };
+
+    setContents([...contents, newContent]);
   };
 
   return (
     <>
       <Header />
       <Banner />
-      <Form subjects={subjects} onRegisterNewContent={content => onRegister(content)} />
-      {subjects.map((subject) => (<Card key={subject.id} name={subject.name} colorButton={subject.colorButton} colorBorder={subject.colorBorder} />))}
+      <Form subjects={subjects} onRegister={onRegister} />
+      {contents.map((content) => (
+        <Card 
+          key={content.id} 
+          name={content.title}  // Alterei para mostrar o título
+          colorButton={content.colorButton} 
+          colorBorder={content.colorBorder}
+          content={content}
+        />
+      ))}
       <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -1,23 +1,29 @@
+import Subject from '../../Subject';
 import styles from './Card.module.css';
 import PropTypes from 'prop-types';
 
-export const Card = ({ name, colorButton, colorBorder }) => {
+export const Card = ({ content, colorButton, colorBorder  }) => {
   return (
     <section className={styles.card} style={{ backgroundColor: colorButton, borderColor: colorBorder }}>
-      <h2 className={styles.title}>{name}</h2>
-      <div>
-        <img src='https://github.com/van-gomes.png' />
-      </div>
-      <div>
-        <button className={styles.button}>DELETAR</button>
-        <button className={styles.button}>EDITAR</button>
-      </div>
+      <Subject
+        key={content.id}
+        name={content.title}
+        image={content.image}
+        video={content.video}
+        description={content.description}
+      />
     </section>
-    );
+  );
 };
 
 Card.propTypes = {
-  name: PropTypes.string.isRequired,
+  content: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    video: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+  }).isRequired,
   colorButton: PropTypes.string.isRequired,
-  colorBorder: PropTypes.string.isRequired
+  colorBorder: PropTypes.string.isRequired,
 };

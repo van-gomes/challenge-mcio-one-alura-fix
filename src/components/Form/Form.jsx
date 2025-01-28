@@ -23,7 +23,7 @@ export const Form = ({ onRegister, subjects }) => {
       description,
     });
   };
-
+  
   return (
     <section className={styles.form}>
       <form onSubmit={onSave}>
