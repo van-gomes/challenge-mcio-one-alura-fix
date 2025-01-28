@@ -5,7 +5,7 @@ import { DropdownList } from "../DropdownList/DropdownList";
 import TextField from "../TextField";
 import styles from "./Form.module.css";
 
-export const Form = ({ onRegister, subject }) => {
+export const Form = ({ onRegister, subjects }) => {
   const [title, setTitle] = useState("");
   const [category, setCategory] = useState("");
   const [image, setImage] = useState("");
@@ -43,7 +43,7 @@ export const Form = ({ onRegister, subject }) => {
           value={category}
           aoAlterado={valor => setCategory(valor)}
           label="Categoria"
-          subject={subject}
+          itens={subjects}
           placeholder="Selecione uma categoría"
           required
         />
@@ -80,5 +80,5 @@ export const Form = ({ onRegister, subject }) => {
 
 Form.propTypes = {
   onRegister: PropTypes.func.isRequired,
-  subject: PropTypes.array.isRequired,
+  subjects: PropTypes.array.isRequired,
 };
