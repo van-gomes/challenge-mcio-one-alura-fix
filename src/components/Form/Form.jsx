@@ -22,6 +22,12 @@ export const Form = ({ onRegister, subjects }) => {
       video,
       description,
     });
+
+    setTitle('');
+    setCategory('');
+    setImage('');
+    setVideo('');
+    setDescription('');
   };
   
   return (

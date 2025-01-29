@@ -59,7 +59,7 @@ function App() {
       {contents.map((content) => (
         <Card 
           key={content.id} 
-          name={content.title}  // Alterei para mostrar o título
+          name={content.title}
           colorButton={content.colorButton} 
           colorBorder={content.colorBorder}
           content={content}
