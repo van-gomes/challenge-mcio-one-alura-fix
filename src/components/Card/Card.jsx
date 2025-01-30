@@ -1,4 +1,4 @@
-import Subject from '../../Subject';
+import Subject from '../Subject';
 import styles from './Card.module.css';
 import PropTypes from 'prop-types';
 

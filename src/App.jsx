@@ -33,19 +33,12 @@ function App() {
   const onRegister = (content) => {
     console.log("Cadastrando...", content);
 
-    // Encontrando a categoria selecionada no array subjects para pegar as cores
-    const categoryData = subjects.find(subject => subject.name === content.category);
-
-    // Se a categoria for encontrada, usamos as cores dela
     const newContent = {
-      id: Date.now().toString(),
       title: content.title,
       category: content.category,
       image: content.image,
       video: content.video,
       description: content.description,
-      colorButton: categoryData ? categoryData.colorButton : "#FFBA05", // Cor padrão se não encontrar
-      colorBorder: categoryData ? categoryData.colorBorder : "#FFBA05"  // Cor padrão se não encontrar
     };
 
     setContents([...contents, newContent]);
