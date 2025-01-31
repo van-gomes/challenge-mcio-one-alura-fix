@@ -12,19 +12,22 @@ function App() {
       id: 1,
       name: "Front-end",
       colorButton: "#6BD1FF",
-      colorBorder: "#6BD1FF"
+      colorBorder: "#6BD1FF",
+      category: "Front-end"
     },
     {
       id: 2,
       name: "Back-end",
       colorButton: "#00C86F",
-      colorBorder: "#00C86F"
+      colorBorder: "#00C86F",
+      category: "Back-end"
     },
     {
       id: 3,
       name: "Mobile",
       colorButton: "#FFBA05",
-      colorBorder: "#FFBA05"
+      colorBorder: "#FFBA05",
+      category: "Mobile"
     }
   ];
 
@@ -33,15 +36,26 @@ function App() {
   const onRegister = (content) => {
     console.log("Cadastrando...", content);
 
-    const newContent = {
-      title: content.title,
-      category: content.category,
-      image: content.image,
-      video: content.video,
-      description: content.description,
-    };
+    // Filtrando a categoria com base no nome da categoria do conteúdo
+    const categoryData = subjects.filter(subject => subject.category === content.category)[0];
 
-    setContents([...contents, newContent]);
+    // Garantindo que a categoria foi encontrada
+    if (categoryData) {
+      const newContent = {
+        id: Date.now().toString(),
+        title: content.title,
+        category: content.category,
+        image: content.image,
+        video: content.video,
+        description: content.description,
+        colorButton: categoryData.colorButton, // Usando as cores da categoria
+        colorBorder: categoryData.colorBorder  // Usando as cores da categoria
+      };
+
+      setContents([...contents, newContent]);
+    } else {
+      console.error("Categoria não encontrada");
+    }
   };
 
   return (
