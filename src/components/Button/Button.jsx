@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import styles from './Button.module.css';
 
-export const Button = ({ children, onClick }) => {
+export const Button = ({ children, onClick, colorButton }) => {
     return (
-        <button className={styles.button} onClick={onClick} >
+        <button className={styles.button} onClick={onClick} style={{ backgroundColor: colorButton }} >
             {children}
         </button>
     );
@@ -12,4 +12,5 @@ export const Button = ({ children, onClick }) => {
 Button.propTypes = {
     children: PropTypes.node.isRequired,
     onClick: PropTypes.func,
+    colorButton: PropTypes.string.isRequired
 };

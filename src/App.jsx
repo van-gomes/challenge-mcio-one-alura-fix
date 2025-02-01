@@ -36,7 +36,6 @@ function App() {
   const onRegister = (content) => {
     console.log("Cadastrando...", content);
 
-    // Filtrando a categoria com base no nome da categoria do conteúdo
     const categoryData = subjects.filter(subject => subject.category === content.category)[0];
 
     // Garantindo que a categoria foi encontrada
