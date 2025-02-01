@@ -8,7 +8,6 @@ export const Subject = ({ name, image, video, description, colorButton }) => {
       <div>
       <Button colorButton={colorButton}>{name}</Button>
       </div>
-      {/* <h2 className={styles.title}>{name}</h2> */}
       <h2>{image}</h2>
       <h2>{video}</h2>
       <h2>{description}</h2>

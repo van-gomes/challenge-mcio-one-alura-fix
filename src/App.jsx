@@ -38,7 +38,6 @@ function App() {
 
     const categoryData = subjects.filter(subject => subject.category === content.category)[0];
 
-    // Garantindo que a categoria foi encontrada
     if (categoryData) {
       const newContent = {
         id: Date.now().toString(),
@@ -47,8 +46,8 @@ function App() {
         image: content.image,
         video: content.video,
         description: content.description,
-        colorButton: categoryData.colorButton, // Usando as cores da categoria
-        colorBorder: categoryData.colorBorder  // Usando as cores da categoria
+        colorButton: categoryData.colorButton,
+        colorBorder: categoryData.colorBorder
       };
 
       setContents([...contents, newContent]);
