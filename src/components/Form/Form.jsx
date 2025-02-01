@@ -22,17 +22,19 @@ export const Form = ({ onRegister, subjects }) => {
       video,
       description,
     });
-
+  };
+  
+  const resetInputs = () => {
     setTitle('');
     setCategory('');
     setImage('');
     setVideo('');
     setDescription('');
-  };
-  
+  }
+
   return (
     <section className={styles.form}>
-      <form onSubmit={onSave}>
+      <form>
         <h1>NOVO VÍDEO</h1>
         <h3>Complete o formulário para criar um novo card de vídeo.</h3>
         <h2>Criar Card</h2>
@@ -77,8 +79,8 @@ export const Form = ({ onRegister, subjects }) => {
           placeholder="Sobre o que é esse vídeo?"
           required
         />
-        <Button>GUARDAR</Button>
-        <Button>LIMPAR</Button>
+        <Button onClick={onSave}>GUARDAR</Button>
+        <Button onClick={resetInputs}>LIMPAR</Button>
       </form>
     </section>
   );
