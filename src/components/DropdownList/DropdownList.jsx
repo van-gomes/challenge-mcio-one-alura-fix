@@ -5,15 +5,12 @@ export const DropdownList = ({ label, itens, value, aoAlterado, obrigatorio = fa
     <div>
       <label>{label}</label>
       <select required={obrigatorio} value={value} onChange={evento => aoAlterado(evento.target.value)}>
-        {itens && itens.length > 0 ? (
-          itens.map((item) => (
+          <option value=""></option>
+          {itens.map((item) => (
             <option key={item.id} value={item.name}>
               {item.name}
             </option>
-          ))
-        ) : (
-          <option disabled>No items available</option>
-        )}
+          ))}
       </select>
     </div>
   );
