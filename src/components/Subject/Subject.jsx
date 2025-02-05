@@ -14,13 +14,8 @@ export const Subject = ({ name, image, video, description, colorButton }) => {
       const youtubeEmbedUrl = video.replace('watch?v=', 'embed/');
       return (
         <iframe
-          width="560"
-          height="315"
           src={youtubeEmbedUrl}
           title={`Vídeo da categoria ${name}`}
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
           className={styles.video}
         ></iframe>
       );
@@ -32,7 +27,7 @@ export const Subject = ({ name, image, video, description, colorButton }) => {
   return (
     <section className={styles.subject}>
       <div className={styles.header}>
-        <Button colorButton={colorButton}>{name}</Button>
+        <Button colorButton={colorButton} className={styles.button__subject}>{name}</Button>
       </div>
       <div className={styles.media}>{renderMedia()}</div>
       <p className={styles.description}>{description}</p>

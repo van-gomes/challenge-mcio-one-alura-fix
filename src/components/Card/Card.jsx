@@ -12,6 +12,7 @@ export const Card = ({ content, colorBorder, colorButton  }) => {
         video={content.video}
         description={content.description}
         colorButton={content.colorButton}
+        colorBorder={content.colorBorder}
       />
     </section>
   );
@@ -24,7 +25,8 @@ Card.propTypes = {
     image: PropTypes.string.isRequired,
     video: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
-    colorButton: PropTypes.string.isRequired
+    colorButton: PropTypes.string.isRequired,
+    colorBorder: PropTypes.string.isRequired
   }).isRequired,
   colorButton: PropTypes.string.isRequired,
   colorBorder: PropTypes.string.isRequired,

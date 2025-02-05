@@ -1,0 +1,31 @@
+.subject {
+    width: 100%;
+    background-color: #000;
+}
+
+.media {
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    flex-wrap: wrap;
+}
+
+.video,
+.image {
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    flex-wrap: wrap;
+    width: 332px;
+    height: 160px;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+}
+
+.header, .video, .image {
+    margin-left: 4rem;
+}
