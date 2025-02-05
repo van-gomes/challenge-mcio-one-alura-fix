@@ -23,14 +23,14 @@ export const Form = ({ onRegister, subjects }) => {
       description,
     });
   };
-  
+
   const resetInputs = () => {
-    setTitle('');
-    setCategory('');
-    setImage('');
-    setVideo('');
-    setDescription('');
-  }
+    setTitle("");
+    setCategory("");
+    setImage("");
+    setVideo("");
+    setDescription("");
+  };
 
   return (
     <section className={styles.form}>
@@ -41,7 +41,7 @@ export const Form = ({ onRegister, subjects }) => {
 
         <TextField
           value={title}
-          aoAlterado={valor => setTitle(valor)}
+          aoAlterado={(valor) => setTitle(valor)}
           label="Titulo"
           type="text"
           placeholder="Ingrese el título"
@@ -49,7 +49,7 @@ export const Form = ({ onRegister, subjects }) => {
         />
         <DropdownList
           value={category}
-          aoAlterado={valor => setCategory(valor)}
+          aoAlterado={(valor) => setCategory(valor)}
           label="Categoria"
           itens={subjects}
           placeholder="Selecione uma categoría"
@@ -57,7 +57,7 @@ export const Form = ({ onRegister, subjects }) => {
         />
         <TextField
           value={image}
-          aoAlterado={valor => setImage(valor)}
+          aoAlterado={(valor) => setImage(valor)}
           label="Imagem"
           type="text"
           placeholder="Digite o link do imagem"
@@ -65,7 +65,7 @@ export const Form = ({ onRegister, subjects }) => {
         />
         <TextField
           value={video}
-          aoAlterado={valor => setVideo(valor)}
+          aoAlterado={(valor) => setVideo(valor)}
           label="Video"
           type="text"
           placeholder="Digite o link do video"
@@ -73,14 +73,16 @@ export const Form = ({ onRegister, subjects }) => {
         />
         <TextField
           value={description}
-          aoAlterado={valor => setDescription(valor)}
+          aoAlterado={(valor) => setDescription(valor)}
           label="Descrição"
           type="text"
           placeholder="Sobre o que é esse vídeo?"
           required
         />
-        <Button onClick={onSave}>GUARDAR</Button>
-        <Button onClick={resetInputs}>LIMPAR</Button>
+        <div className={styles.container__button}>
+          <Button onClick={onSave}>GUARDAR</Button>
+          <Button onClick={resetInputs}>LIMPAR</Button>
+        </div>
       </form>
     </section>
   );
