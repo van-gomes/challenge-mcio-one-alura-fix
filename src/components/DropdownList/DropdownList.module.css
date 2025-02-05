@@ -13,3 +13,7 @@ select {
     border-radius: 10px;
     border: 3px solid #262626;
 }
+
+option {
+    background-color: #000;
+}
