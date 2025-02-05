@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+select {
+    height: 62px;
+    padding: .5rem;
+    color: #fff;
+    background-color: transparent;
+    border-radius: 10px;
+    border: 3px solid #262626;
+}
