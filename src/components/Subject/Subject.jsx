@@ -2,13 +2,8 @@ import { Button } from '../Button/Button';
 import styles from './Subject.module.css';
 import PropTypes from 'prop-types';
 
-export const Subject = ({ name, image, video, description, colorButton }) => {
+export const Subject = ({ name, video, description, colorButton }) => {
   const renderMedia = () => {
-    // Renderiza imagem se for uma URL válida
-    if (image && (image.endsWith('.jpg') || image.endsWith('.jpeg') || image.endsWith('.png') || image.endsWith('.gif'))) {
-      return <img src={image} alt={`Imagem da categoria ${name}`} className={styles.image} />;
-    }
-
     // Renderiza vídeo do YouTube se for uma URL válida
     if (video && video.includes('youtube.com/watch')) {
       const youtubeEmbedUrl = video.replace('watch?v=', 'embed/');
@@ -37,7 +32,6 @@ export const Subject = ({ name, image, video, description, colorButton }) => {
 
 Subject.propTypes = {
   name: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
   video: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   colorButton: PropTypes.string.isRequired,

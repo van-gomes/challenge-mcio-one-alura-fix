@@ -43,7 +43,6 @@ function App() {
         id: Date.now().toString(),
         title: content.title,
         category: content.category,
-        image: content.image,
         video: content.video,
         description: content.description,
         colorButton: categoryData.colorButton,

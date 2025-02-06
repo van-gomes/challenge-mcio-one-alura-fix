@@ -8,7 +8,6 @@ export const Card = ({ content, colorBorder, colorButton  }) => {
       <Subject
         key={content.id}
         name={content.category}
-        image={content.image}
         video={content.video}
         description={content.description}
         colorButton={content.colorButton}
@@ -22,7 +21,6 @@ Card.propTypes = {
   content: PropTypes.shape({
     id: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired,
     video: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     colorButton: PropTypes.string.isRequired,

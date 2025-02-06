@@ -8,17 +8,15 @@ import styles from "./Form.module.css";
 export const Form = ({ onRegister, subjects }) => {
   const [title, setTitle] = useState("");
   const [category, setCategory] = useState("");
-  const [image, setImage] = useState("");
   const [video, setVideo] = useState("");
   const [description, setDescription] = useState("");
 
   const onSave = (event) => {
     event.preventDefault();
-    console.log("Salvando...", title, category, image, video, description);
+    console.log("Salvando...", title, category, video, description);
     onRegister({
       title,
       category,
-      image,
       video,
       description,
     });
@@ -27,7 +25,6 @@ export const Form = ({ onRegister, subjects }) => {
   const resetInputs = () => {
     setTitle("");
     setCategory("");
-    setImage("");
     setVideo("");
     setDescription("");
   };
@@ -53,14 +50,6 @@ export const Form = ({ onRegister, subjects }) => {
           label="Categoria"
           itens={subjects}
           placeholder="Selecione uma categoría"
-          required
-        />
-        <TextField
-          value={image}
-          aoAlterado={(valor) => setImage(valor)}
-          label="Imagem"
-          type="text"
-          placeholder="Digite o link do imagem"
           required
         />
         <TextField
