@@ -12,7 +12,8 @@ label {
     color: #fff;
 }
 
-.container__text_field, label {
+.container__text_field,
+label {
     margin-bottom: 1rem;
 }
 
@@ -23,4 +24,25 @@ input {
     border: 3px solid #262626;
     color: #fff;
     background-color: transparent;
+}
+
+@media screen and (min-width: 1440px) {
+
+    .container__text_field,
+    .container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    label {
+        margin-right: 16px;
+    }
+
+    input,
+    select {
+        flex: 1;
+        padding: 12px;
+        font-size: 16px;
+    }
 }

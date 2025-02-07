@@ -18,7 +18,8 @@ form h3 {
     font-weight: 400;
 }
 
-form h1, form h3 {
+form h1,
+form h3 {
     text-align: center;
     color: #fff;
 }
@@ -39,4 +40,12 @@ form h2 {
     justify-content: center;
     align-items: center;
     margin-top: 3rem;
+}
+
+@media screen and (min-width: 1024px) {
+    form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
 }
