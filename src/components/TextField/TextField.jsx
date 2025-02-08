@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export const TextField = ({ label, type, placeholder, value, aoAlterado }) => {
   return (
-      <div className={styles.container__text_field}>
+      <div className={styles.container_text_field}>
           <label>{label}</label>
           <input 
               type={type} 

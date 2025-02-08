@@ -1,18 +1,13 @@
-.container__header {
-  position: fixed;
+.container_header {
   display: flex;
   justify-content: center;
   align-items: center;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100px;
+  height: 40px;
   padding: 30px;
   background-color: #000000;
-}
-
-.container_logo {
-  width: 100%;
 }
 
 .container_logo img {

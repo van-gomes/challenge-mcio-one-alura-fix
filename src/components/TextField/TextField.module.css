@@ -1,4 +1,4 @@
-.container__text_field {
+.container_text_field {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,7 +12,7 @@ label {
     color: #fff;
 }
 
-.container__text_field,
+.container_text_field,
 label {
     margin-bottom: 1rem;
 }
