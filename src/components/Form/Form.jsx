@@ -31,44 +31,54 @@ export const Form = ({ onRegister, subjects }) => {
 
   return (
     <section className={styles.form}>
-      <form>
+      <form className={styles.form_container}>
         <h1>NOVO VÍDEO</h1>
         <h3>COMPLETE O FORMULÁRIO PARA CRIAR UM NOVO CARD DE VÍDEO.</h3>
         <h2>Criar Card</h2>
 
-        <TextField
-          value={title}
-          aoAlterado={(valor) => setTitle(valor)}
-          label="Titulo"
-          type="text"
-          placeholder="Ingrese el título"
-          required
-        />
-        <DropdownList
-          value={category}
-          aoAlterado={(valor) => setCategory(valor)}
-          label="Categoria"
-          itens={subjects}
-          placeholder="Selecione uma categoría"
-          required
-        />
-        <TextField
-          value={video}
-          aoAlterado={(valor) => setVideo(valor)}
-          label="Video"
-          type="text"
-          placeholder="Digite o link do video"
-          required
-        />
-        <TextField
-          value={description}
-          aoAlterado={(valor) => setDescription(valor)}
-          label="Descrição"
-          type="text"
-          placeholder="Sobre o que é esse vídeo?"
-          required
-        />
-        <div className={styles.container__button}>
+        <div className={styles.container_form_group}>
+          <div className={styles.form_group}>
+            <TextField
+              value={title}
+              aoAlterado={(valor) => setTitle(valor)}
+              label="Titulo"
+              type="text"
+              placeholder="Ingrese el título"
+              required
+            />
+          </div>
+          <div className={styles.form_group}>
+            <DropdownList
+              value={category}
+              aoAlterado={(valor) => setCategory(valor)}
+              label="Categoria"
+              itens={subjects}
+              placeholder="Selecione uma categoría"
+              required
+            />
+          </div>
+          <div className={styles.form_group}>
+            <TextField
+              value={video}
+              aoAlterado={(valor) => setVideo(valor)}
+              label="Video"
+              type="text"
+              placeholder="Digite o link do video"
+              required
+            />
+          </div>
+          <div className={styles.form_group}>
+            <TextField
+              value={description}
+              aoAlterado={(valor) => setDescription(valor)}
+              label="Descrição"
+              type="text"
+              placeholder="Sobre o que é esse vídeo?"
+              required
+            />
+          </div>
+        </div>
+        <div className={styles.container_button}>
           <Button onClick={onSave}>GUARDAR</Button>
           <Button onClick={resetInputs}>LIMPAR</Button>
         </div>

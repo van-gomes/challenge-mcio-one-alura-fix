@@ -27,22 +27,13 @@ input {
 }
 
 @media screen and (min-width: 1440px) {
-
-    .container__text_field,
-    .container {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-    }
-
     label {
-        margin-right: 16px;
+        font-size: 14px;
+        margin-bottom: 8px;
     }
 
     input,
     select {
-        flex: 1;
-        padding: 12px;
-        font-size: 16px;
+        width: 100%;
     }
 }

@@ -35,7 +35,7 @@ form h2 {
     text-align: left;
 }
 
-.container__button {
+.container_button {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -44,6 +44,26 @@ form h2 {
 }
 
 @media screen and (min-width: 1024px) {
+    .form_container {
+        display: flex;
+        flex-direction: column;
+        max-width: 800px;
+        margin: 20px auto;
+        gap: 20px;
+    }
+
+    .container_form_group {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .form_group {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
     form h1 {
         font-size: 4rem;
         font-weight: 900;
@@ -60,7 +80,17 @@ form h2 {
         width: 1117px;
         display: inline-block;
         padding: 1rem;
-        border-top: 1px solid #262626;;
+        border-top: 1px solid #262626;
+        ;
         border-bottom: 1px solid #262626;
+    }
+
+    .container_button {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 2rem;
+        margin-top: 0rem;
     }
 }
