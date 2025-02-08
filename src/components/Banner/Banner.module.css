@@ -1,9 +1,10 @@
 .container__banner {
+    display: flex;
     width: 100%;
 }
 
 .container__banner img {
     width: 100%;
-    height: 1060px;
+    height: 66.25rem;
     object-fit: cover;
 }

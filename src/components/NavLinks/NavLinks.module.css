@@ -1,24 +1,25 @@
-.container__nav{
+.container_nav {
   width: 100%;
+  margin: 2rem;
 }
 
-.nav__links {
+.nav_links {
   display: flex;
   justify-content: end;
   align-items: center;
-  gap: 15px;
+  gap: 0.9375rem;
 }
 
-.nav__links li {
+.nav_links li {
   list-style: none;
-  width: 170px;
+  width: 10.625rem;
   text-align: center;
 }
 
-.nav__link__home {
+.nav_link_home {
   color: blue;
-  border: 2px solid blue;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px blue;
+  border: 0.125rem solid blue;
+  padding: 0.9375rem;
+  border-radius: 0.9375rem;
+  box-shadow: 0 0 0.625rem blue;
 }
