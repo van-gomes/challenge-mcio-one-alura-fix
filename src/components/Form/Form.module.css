@@ -27,6 +27,7 @@ form h3 {
 form h2 {
     margin-top: 3rem;
     margin-bottom: 3rem;
+    display: inline-block;
     font-size: 36px;
     font-weight: 600;
     line-height: 24px;
@@ -43,9 +44,23 @@ form h2 {
 }
 
 @media screen and (min-width: 1024px) {
-    form {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 24px;
+    form h1 {
+        font-size: 4rem;
+        font-weight: 900;
+    }
+
+    form h3 {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    form h2 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        width: 1117px;
+        display: inline-block;
+        padding: 1rem;
+        border-top: 1px solid #262626;;
+        border-bottom: 1px solid #262626;
     }
 }

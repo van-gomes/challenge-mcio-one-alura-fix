@@ -33,7 +33,7 @@ export const Form = ({ onRegister, subjects }) => {
     <section className={styles.form}>
       <form>
         <h1>NOVO VÍDEO</h1>
-        <h3>Complete o formulário para criar um novo card de vídeo.</h3>
+        <h3>COMPLETE O FORMULÁRIO PARA CRIAR UM NOVO CARD DE VÍDEO.</h3>
         <h2>Criar Card</h2>
 
         <TextField
