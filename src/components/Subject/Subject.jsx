@@ -20,13 +20,13 @@ export const Subject = ({ name, video, description, colorButton }) => {
   };
 
   return (
-    <section className={styles.subject}>
-      <div className={styles.header}>
+    <div className={styles.subject}>
+      <div className={styles.button}>
         <Button colorButton={colorButton} className={styles.button__subject}>{name}</Button>
       </div>
       <div className={styles.media}>{renderMedia()}</div>
-      <p className={styles.description}>{description}</p>
-    </section>
+      {/* <p className={styles.description}>{description}</p> */}
+    </div>
   );
 };
 

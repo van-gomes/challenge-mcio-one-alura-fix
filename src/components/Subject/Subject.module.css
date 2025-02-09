@@ -3,29 +3,41 @@
     background-color: #000;
 }
 
-.media {
+.media,
+.video {
     display: flex;
     justify-content: flex-start;
     align-items: start;
     flex-wrap: wrap;
 }
 
-.video,
-.image {
-    display: flex;
-    justify-content: flex-start;
-    align-items: start;
-    flex-wrap: wrap;
+.video {
     width: 332px;
     height: 160px;
 }
 
-.header {
+.button {
     display: flex;
     justify-content: flex-start;
     align-items: start;
 }
 
-.header, .video, .image {
+.button,
+.video {
     margin-left: 4rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .button {
+        display: flex;
+        justify-content: flex-start;
+        align-items: start;
+    }
+
+    .subject {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        width: 100%;
+    }
 }
