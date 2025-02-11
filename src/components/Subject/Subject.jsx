@@ -1,12 +1,12 @@
-import { Button } from '../Button/Button';
-import styles from './Subject.module.css';
-import PropTypes from 'prop-types';
+import { Button } from "../Button/Button";
+import styles from "./Subject.module.css";
+import PropTypes from "prop-types";
 
 export const Subject = ({ name, video, description, colorButton }) => {
   const renderMedia = () => {
     // Renderiza vídeo do YouTube se for uma URL válida
-    if (video && video.includes('youtube.com/watch')) {
-      const youtubeEmbedUrl = video.replace('watch?v=', 'embed/');
+    if (video && video.includes("youtube.com/watch")) {
+      const youtubeEmbedUrl = video.replace("watch?v=", "embed/");
       return (
         <iframe
           src={youtubeEmbedUrl}
@@ -21,11 +21,10 @@ export const Subject = ({ name, video, description, colorButton }) => {
 
   return (
     <div className={styles.subject}>
-      <div className={styles.button}>
-        <Button colorButton={colorButton} className={styles.button__subject}>{name}</Button>
+      <div>
+        <a className={styles.media}>{renderMedia()}</a>
+        {/* <p className={styles.description}>{description}</p> */}
       </div>
-      <div className={styles.media}>{renderMedia()}</div>
-      {/* <p className={styles.description}>{description}</p> */}
     </div>
   );
 };

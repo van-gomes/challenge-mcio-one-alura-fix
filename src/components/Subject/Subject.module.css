@@ -1,43 +1,17 @@
 .subject {
     width: 100%;
-    background-color: #000;
 }
 
-.media,
-.video {
-    display: flex;
-    justify-content: flex-start;
-    align-items: start;
-    flex-wrap: wrap;
+a {
+    min-width: 616.28px;
+    max-width: 616.28px;
+    min-height: 100%;
+    position: relative;
+    width: 100%;
 }
 
-.video {
-    width: 332px;
-    height: 160px;
-}
-
-.button {
-    display: flex;
-    justify-content: flex-start;
-    align-items: start;
-}
-
-.button,
 .video {
     margin-left: 4rem;
 }
 
-@media screen and (min-width: 1024px) {
-    .button {
-        display: flex;
-        justify-content: flex-start;
-        align-items: start;
-    }
-
-    .subject {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
-        width: 100%;
-    }
-}
+@media screen and (min-width: 1024px) {}
