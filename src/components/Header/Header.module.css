@@ -2,12 +2,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
   width: 100%;
 }
 
 .container_logo img {
-  display: none;
+  display: flex;
+  max-width: 150px;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -22,7 +25,7 @@
     padding: 2.8rem;
     background-color: #000000;
   }
-  
+
   .container_logo img {
     height: 2.5rem;
     padding: 0.2em;

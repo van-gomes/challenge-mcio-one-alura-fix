@@ -2,7 +2,6 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    padding: 2rem;
     margin-bottom: 12rem;
     background-color: #000000;
 }
@@ -29,11 +28,15 @@ form h2 {
     margin-top: 3rem;
     margin-bottom: 3rem;
     display: inline-block;
-    font-size: 36px;
+    width: 170px;
+    padding: .5rem;
+    text-align: left;
+    font-size: 26px;
     font-weight: 600;
     line-height: 24px;
     color: #fff;
-    text-align: left;
+    border-top: 1px solid #262626;
+    border-bottom: 1px solid #262626;
 }
 
 .container_button {
@@ -82,7 +85,6 @@ form h2 {
         display: inline-block;
         padding: 1rem;
         border-top: 1px solid #262626;
-        ;
         border-bottom: 1px solid #262626;
     }
 
