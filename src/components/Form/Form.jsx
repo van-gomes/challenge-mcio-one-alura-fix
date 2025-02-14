@@ -32,7 +32,7 @@ export const Form = ({ onRegister, subjects }) => {
     setCategory("");
     setVideo("");
     setDescription("");
-    setShowCategoryButton(false); // Esconde o botão ao limpar o formulário
+    setShowCategoryButton(false);
   };
 
   return (

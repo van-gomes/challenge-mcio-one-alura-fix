@@ -1,10 +1,8 @@
-import { Button } from "../Button/Button";
 import styles from "./Subject.module.css";
 import PropTypes from "prop-types";
 
-export const Subject = ({ name, video, description, colorButton }) => {
+export const Subject = ({ name, video }) => {
   const renderMedia = () => {
-    // Renderiza vídeo do YouTube se for uma URL válida
     if (video && video.includes("youtube.com/watch")) {
       const youtubeEmbedUrl = video.replace("watch?v=", "embed/");
       return (
