@@ -1,5 +1,5 @@
-import banner from "../../assets/bannerMain.png";
-import styles from "./Banner.module.css";
+import banner from '../../assets/bannerMain.png';
+import styles from './Banner.module.css';
 
 export const Banner = () => {
   return (

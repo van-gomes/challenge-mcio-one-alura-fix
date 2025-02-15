@@ -1,5 +1,4 @@
-import PropTypes from "prop-types";
-import styles from "./DropdownList.module.css";
+import styles from './DropdownList.module.css';
 
 export const DropdownList = ({ label, itens, value, aoAlterado, obrigatorio = false }) => {
   return (
@@ -15,17 +14,6 @@ export const DropdownList = ({ label, itens, value, aoAlterado, obrigatorio = fa
       </select>
     </div>
   );
-};
-
-DropdownList.propTypes = {
-  label: PropTypes.string.isRequired,
-  itens: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired
-  })).isRequired,
-  value: PropTypes.string.isRequired,
-  aoAlterado: PropTypes.func.isRequired,
-  obrigatorio: PropTypes.bool
 };
 
 

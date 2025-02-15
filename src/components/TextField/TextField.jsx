@@ -1,5 +1,4 @@
 import styles from './TextField.module.css';
-import PropTypes from 'prop-types';
 
 export const TextField = ({ label, type, placeholder, value, aoAlterado }) => {
   return (
@@ -15,11 +14,3 @@ export const TextField = ({ label, type, placeholder, value, aoAlterado }) => {
       </div>
   );
 }
-
-TextField.propTypes = {
-  label: PropTypes.string.isRequired,
-  type: PropTypes.string,
-  placeholder: PropTypes.string,
-  value: PropTypes.string,
-  aoAlterado: PropTypes.func.isRequired,
-};

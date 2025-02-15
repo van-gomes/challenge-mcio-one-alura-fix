@@ -1,6 +1,5 @@
 import { Button } from '../Button/Button';
 import styles from './Subject.module.css';
-import PropTypes from 'prop-types';
 
 export const Subject = ({ name, video, description, colorButton }) => {
   const renderMedia = () => {
@@ -31,12 +30,4 @@ export const Subject = ({ name, video, description, colorButton }) => {
       <p>{description}</p>
     </section>
   );
-};
-
-Subject.propTypes = {
-  name: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
-  video: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  colorButton: PropTypes.string.isRequired,
 };

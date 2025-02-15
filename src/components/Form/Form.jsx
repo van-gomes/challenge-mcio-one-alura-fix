@@ -1,9 +1,8 @@
-import { useState } from "react";
-import PropTypes from "prop-types";
-import Button from "../Button";
-import { DropdownList } from "../DropdownList/DropdownList";
-import TextField from "../TextField";
-import styles from "./Form.module.css";
+import { useState } from 'react';
+import Button from '../Button';
+import { DropdownList } from '../DropdownList/DropdownList';
+import TextField from '../TextField';
+import styles from './Form.module.css';
 
 export const Form = ({ onRegister, subjects }) => {
   const [title, setTitle] = useState("");
@@ -104,9 +103,4 @@ export const Form = ({ onRegister, subjects }) => {
       </form>
     </section>
   );
-};
-
-Form.propTypes = {
-  onRegister: PropTypes.func.isRequired,
-  subjects: PropTypes.array.isRequired,
 };
