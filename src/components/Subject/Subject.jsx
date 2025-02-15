@@ -1,7 +1,6 @@
-import { Button } from '../Button/Button';
 import styles from './Subject.module.css';
 
-export const Subject = ({ name, video, description, colorButton }) => {
+export const Subject = ({ name, video, description }) => {
   const renderMedia = () => {
     if (video && video.includes('youtube.com/watch')) {
       const youtubeEmbedUrl = video.replace('watch?v=', 'embed/');
@@ -23,9 +22,6 @@ export const Subject = ({ name, video, description, colorButton }) => {
 
   return (
     <section className={styles.subject}>
-      <div>
-        <Button colorButton={colorButton}>{name}</Button>
-      </div>
       <div>{renderMedia()}</div>
       <p>{description}</p>
     </section>

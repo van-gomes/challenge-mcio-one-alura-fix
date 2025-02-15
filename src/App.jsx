@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import { Form } from './components/Form/Form';
 import { Header } from './components/Header/Header';
 import { Card } from './components/Card/Card';
+import Button from './components/Button';
 
 function App() {
   const subjects = [
@@ -36,7 +37,7 @@ function App() {
   const onRegister = (content) => {
     console.log("Cadastrando...", content);
 
-    const categoryData = subjects.filter(subject => subject.category === content.category)[0];
+    const categoryData = subjects.find(subject => subject.category === content.category);
 
     if (categoryData) {
       const newContent = {
@@ -55,20 +56,41 @@ function App() {
     }
   };
 
+  // Agrupa os vídeos por categoria
+  const groupedContents = contents.reduce((acc, content) => {
+    if (!acc[content.category]) {
+      acc[content.category] = [];
+    }
+    acc[content.category].push(content);
+    return acc;
+  }, {});
+
   return (
     <>
       <Header />
       <Banner />
       <Form subjects={subjects} onRegister={onRegister} />
-      {contents.map((content) => (
-        <Card 
-          key={content.id} 
-          name={content.title}
-          colorButton={content.colorButton} 
-          colorBorder={content.colorBorder}
-          content={content}
-        />
-      ))}
+
+      {Object.entries(groupedContents).map(([category, videos]) => {
+        const categoryData = subjects.find(subject => subject.category === category);
+        return (
+          <section key={category} style={{ marginBottom: "20px" }}>
+            {/* Exibe o botão APENAS UMA VEZ por categoria */}
+            <Button colorButton={categoryData.colorButton}>{category.toUpperCase()}</Button>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
+              {videos.map((content) => (
+                <Card
+                  key={content.id}
+                  name={content.title}
+                  colorButton={content.colorButton}
+                  colorBorder={content.colorBorder}
+                  content={content}
+                />
+              ))}
+            </div>
+          </section>
+        );
+      })}
       <Footer />
     </>
   );

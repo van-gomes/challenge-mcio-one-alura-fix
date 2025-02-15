@@ -1,15 +1,14 @@
-import { useState } from 'react';
-import Button from '../Button';
-import { DropdownList } from '../DropdownList/DropdownList';
-import TextField from '../TextField';
-import styles from './Form.module.css';
+import { useState } from "react";
+import Button from "../Button";
+import { DropdownList } from "../DropdownList/DropdownList";
+import TextField from "../TextField";
+import styles from "./Form.module.css";
 
 export const Form = ({ onRegister, subjects }) => {
   const [title, setTitle] = useState("");
   const [category, setCategory] = useState("");
   const [video, setVideo] = useState("");
   const [description, setDescription] = useState("");
-  const [showCategoryButton, setShowCategoryButton] = useState(false);
 
   const selectedSubject = subjects.find((subject) => subject.category === category);
 
@@ -20,8 +19,6 @@ export const Form = ({ onRegister, subjects }) => {
       console.error("Categoria não encontrada!");
       return;
     }
-
-    setShowCategoryButton(true);
 
     onRegister({
       title,
@@ -37,7 +34,6 @@ export const Form = ({ onRegister, subjects }) => {
     setCategory("");
     setVideo("");
     setDescription("");
-    setShowCategoryButton(false);
   };
 
   return (
@@ -94,12 +90,6 @@ export const Form = ({ onRegister, subjects }) => {
           <Button type="submit">GUARDAR</Button>
           <Button type="button" onClick={resetInputs}>LIMPAR</Button>
         </div>
-
-        {showCategoryButton && category && selectedSubject && (
-          <div className={styles.container_button}>
-            <Button colorButton={selectedSubject.colorButton}>{category}</Button>
-          </div>
-        )}
       </form>
     </section>
   );

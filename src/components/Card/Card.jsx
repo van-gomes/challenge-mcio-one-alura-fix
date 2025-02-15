@@ -10,7 +10,6 @@ export const Card = ({ content, colorBorder }) => {
         image={content.image}
         video={content.video}
         description={content.description}
-        colorButton={content.colorButton}
       />
     </section>
   );
