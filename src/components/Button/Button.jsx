@@ -6,7 +6,7 @@ export const Button = ({ children, onClick, colorButton }) => {
         <button 
             className={styles.button} 
             onClick={onClick} 
-            style={{ backgroundColor: colorButton, borderColor: colorButton }} // Adiciona cor da borda
+            style={{ backgroundColor: colorButton, borderColor: colorButton }}
         >
             {children}
         </button>

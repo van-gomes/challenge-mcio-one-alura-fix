@@ -12,10 +12,10 @@ export const Form = ({ onRegister, subjects }) => {
   const [description, setDescription] = useState("");
   const [showCategoryButton, setShowCategoryButton] = useState(false);
 
+  const selectedSubject = subjects.find((subject) => subject.category === category);
+
   const onSave = (event) => {
     event.preventDefault();
-
-    const selectedSubject = subjects.find((subject) => subject.category === category);
 
     if (!selectedSubject) {
       console.error("Categoria não encontrada!");
@@ -29,7 +29,7 @@ export const Form = ({ onRegister, subjects }) => {
       category,
       video,
       description,
-      colorButton: selectedSubject.colorButton, // Passa a cor correta
+      colorButton: selectedSubject.colorButton,
     });
   };
 
@@ -40,8 +40,6 @@ export const Form = ({ onRegister, subjects }) => {
     setDescription("");
     setShowCategoryButton(false);
   };
-
-  const selectedSubject = subjects.find((subject) => subject.category === category);
 
   return (
     <section className={styles.form}>
