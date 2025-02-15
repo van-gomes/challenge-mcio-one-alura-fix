@@ -10,13 +10,18 @@ export const Form = ({ onRegister, subjects }) => {
   const [category, setCategory] = useState("");
   const [video, setVideo] = useState("");
   const [description, setDescription] = useState("");
-  const [showCategoryButton, setShowCategoryButton] = useState(false); // Novo estado
+  const [showCategoryButton, setShowCategoryButton] = useState(false);
 
   const onSave = (event) => {
     event.preventDefault();
-    console.log("Salvando...", title, category, video, description);
 
-    // Garante que o botão com a categoria só aparece depois do clique em "GUARDAR"
+    const selectedSubject = subjects.find((subject) => subject.category === category);
+
+    if (!selectedSubject) {
+      console.error("Categoria não encontrada!");
+      return;
+    }
+
     setShowCategoryButton(true);
 
     onRegister({
@@ -24,6 +29,7 @@ export const Form = ({ onRegister, subjects }) => {
       category,
       video,
       description,
+      colorButton: selectedSubject.colorButton, // Passa a cor correta
     });
   };
 
@@ -34,6 +40,8 @@ export const Form = ({ onRegister, subjects }) => {
     setDescription("");
     setShowCategoryButton(false);
   };
+
+  const selectedSubject = subjects.find((subject) => subject.category === category);
 
   return (
     <section className={styles.form}>
@@ -49,7 +57,7 @@ export const Form = ({ onRegister, subjects }) => {
               aoAlterado={(valor) => setTitle(valor)}
               label="Título"
               type="text"
-              placeholder="Ingrese el título"
+              placeholder="Digite o título"
               required
             />
           </div>
@@ -90,9 +98,9 @@ export const Form = ({ onRegister, subjects }) => {
           <Button type="button" onClick={resetInputs}>LIMPAR</Button>
         </div>
 
-        {showCategoryButton && category && (
+        {showCategoryButton && category && selectedSubject && (
           <div className={styles.container_button}>
-            <Button>{category}</Button>
+            <Button colorButton={selectedSubject.colorButton}>{category}</Button>
           </div>
         )}
       </form>

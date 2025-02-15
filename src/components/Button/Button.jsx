@@ -3,7 +3,11 @@ import styles from './Button.module.css';
 
 export const Button = ({ children, onClick, colorButton }) => {
     return (
-        <button className={styles.button} onClick={onClick} style={{ backgroundColor: colorButton }} >
+        <button 
+            className={styles.button} 
+            onClick={onClick} 
+            style={{ backgroundColor: colorButton, borderColor: colorButton }} // Adiciona cor da borda
+        >
             {children}
         </button>
     );
