@@ -3,7 +3,6 @@ import js from "@eslint/js";
 import react from "eslint-plugin-react";
 import babelParser from "@babel/eslint-parser";
 
-/** @type {import('eslint').Linter.FlatConfig[]} */
 export default [
   {
     files: ["**/*.{js,mjs,cjs,jsx,ts,tsx}"],
