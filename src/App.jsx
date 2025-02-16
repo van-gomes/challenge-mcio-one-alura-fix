@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './App.module.css';
+import styles from './App.module.css';
 import Banner from './components/Banner';
 import Footer from './components/Footer';
 import { Form } from './components/Form/Form';
@@ -76,7 +76,7 @@ function App() {
         return (
           <section key={category} style={{ marginBottom: "20px" }}>
             {/* Exibe o botão APENAS UMA VEZ por categoria */}
-            <Button colorButton={categoryData.colorButton}>{category.toUpperCase()}</Button>
+            <Button colorButton={categoryData.colorButton} className={styles.category_button}>{category.toUpperCase()}</Button>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
               {videos.map((content) => (
                 <Card

@@ -7,3 +7,10 @@
   body {
     background-color: #000;
   }
+
+  .category_button {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 3rem;
+  }
