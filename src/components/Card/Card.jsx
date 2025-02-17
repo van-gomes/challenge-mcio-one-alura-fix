@@ -1,16 +1,16 @@
 import Subject from '../Subject';
 import styles from './Card.module.css';
 
-export const Card = ({ content, colorBorder }) => {
+export const Card = ({ content }) => {
   return (
-    <section className={styles.card} style={{ borderColor: colorBorder }}>
+    <section className={styles.card}>
       <Subject
         key={content.id}
         name={content.category}
-        image={content.image}
         video={content.video}
         description={content.description}
+        colorBorder={content.colorBorder}
       />
     </section>
   );
-};
+}

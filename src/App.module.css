@@ -1,16 +1,25 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  body {
-    background-color: #000;
-  }
+body {
+  background-color: #000;
+}
 
-  .category_button {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-left: 3rem;
-  }
+.category_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 4rem;
+  width: fit-content;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
