@@ -78,7 +78,7 @@ export function App() {
           (subject) => subject.category === category
         );
         return (
-          <section key={category} style={{ marginBottom: "20px" }}>
+          <section key={category} className={styles.container_app}>
             {/* Exibe o botão APENAS UMA VEZ por categoria */}
             <Button
               colorButton={categoryData.colorButton}
@@ -86,7 +86,7 @@ export function App() {
             >
               {category.toUpperCase()}
             </Button>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
+            <div className={styles.video_app}>
               {videos.map((content) => (
                 <Card key={content.id} content={content} />
               ))}

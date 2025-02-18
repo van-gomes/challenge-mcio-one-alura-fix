@@ -13,16 +13,14 @@ export const Subject = ({ name, video, description, colorBorder }) => {
     <div className={styles.subject_container}>
       <section
         className={styles.subject}
-        style={{ "--borderColor": colorBorder || "#FFFFFF" }} // Passa a cor dinamicamente
+        style={{ "--borderColor": colorBorder || "#FFFFFF" }}
       >
-        <div>
+        <div className={styles.container_video}>
           {youtubeEmbedUrl ? (
             <iframe
               src={youtubeEmbedUrl}
               title={`Vídeo da categoria ${name}`}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className={styles.video}
+              className={styles.iframe_video}
             ></iframe>
           ) : (
             <p className={styles.noMedia}>Nenhuma mídia disponível</p>
