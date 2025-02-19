@@ -1,8 +1,12 @@
+.container_text_field,
+label {
+    margin-bottom: 1rem;
+}
+
 .container_text_field {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 1rem;
 }
 
 label {
@@ -12,14 +16,9 @@ label {
     color: #fff;
 }
 
-.container_text_field,
-label {
-    margin-bottom: 1rem;
-}
-
 input {
     height: 4rem;
-    padding: .5rem;
+    padding: 0.5rem;
     border-radius: 10px;
     border: 3px solid #262626;
     color: #fff;
@@ -27,9 +26,14 @@ input {
 }
 
 @media screen and (min-width: 1440px) {
+
+    .container_text_field,
+    label {
+        margin-bottom: 0.5rem;
+    }
+
     label {
         font-size: 0.875rem;
-        margin-bottom: 0.5rem;
     }
 
     input,
