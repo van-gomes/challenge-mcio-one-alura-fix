@@ -7,7 +7,7 @@
 
 .container_logo img {
   display: flex;
-  max-width: 150px;
+  max-width: 9,375rem;
   justify-content: center;
   align-items: center;
   padding: 1rem;
