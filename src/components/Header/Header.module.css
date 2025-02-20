@@ -1,16 +1,13 @@
-.container_header {
+.container_logo img {
+  max-width: 9,375rem;
+  padding: 1rem;
+}
+
+.container_header, .container_logo img {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-}
-
-.container_logo img {
-  display: flex;
-  max-width: 9,375rem;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
 }
 
 @media screen and (min-width: 1024px) {

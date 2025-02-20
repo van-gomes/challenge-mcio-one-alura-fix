@@ -1,11 +1,13 @@
-.subject_container {
+.subject_container, .subject {
   display: flex;
+}
+
+.subject_container {
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .subject {
-  display: flex;
   flex-direction: column;
   max-width: 31, 25rem;
 }
