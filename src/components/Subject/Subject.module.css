@@ -29,6 +29,10 @@
   border-radius: 8px;
 }
 
+p {
+  color: #ffffff;
+}
+
 @media screen and (max-width: 768px) {
   .subject {
     width: 100%;
