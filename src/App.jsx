@@ -1,11 +1,12 @@
-import { useState } from "react";
-import styles from "./App.module.css";
-import Banner from "./components/Banner";
-import Footer from "./components/Footer";
-import { Form } from "./components/Form/Form";
-import { Header } from "./components/Header/Header";
-import { Card } from "./components/Card/Card";
-import Button from "./components/Button";
+import { useState } from 'react';
+import { Banner } from './components/Banner';
+import { Footer } from './components/Footer';
+import { Form } from './components/Form/Form';
+import { Header } from './components/Header/Header';
+import { Card } from './components/Card/Card';
+import Button from './components/Button';
+import styles from './App.module.css';
+import '../src/global.css';
 
 export function App() {
   const subjects = [
