@@ -14,21 +14,6 @@ ESLint — Padronização do código.
 
 JavaScript ES6+ — Uso de arrow functions, destructuring, import/export, entre outros.
 
-🏗 Estrutura do Projeto
-
-challenge-mcio-one-alura-fix/
-│── src/
-│   ├── components/         # Componentes reutilizáveis
-│   ├── App.jsx             # Componente principal da aplicação
-│   ├── App.module.css      # Estilização do App.jsx
-│   ├── global.css          # Estilos globais
-│── public/
-│── .gitignore
-│── eslint.config.js        # Configuração do ESLint
-│── vite.config.js          # Configuração do Vite
-│── package.json            # Dependências do projeto
-│── index.html              # Arquivo HTML principal
-
 📦 Instalação e Execução
 
 1️⃣ Clone o repositório
@@ -48,7 +33,11 @@ Acesse no navegador: http://localhost:5173/
 
 📌 Funcionalidades Implementadas
 
-✅ Exibição dinâmica das disciplinas✅ Interface responsiva✅ Botões personalizados para cada disciplina✅ Componentização eficiente✅ Estilização modular
+✅ Exibição dinâmica das disciplinas
+✅ Interface responsiva
+✅ Botões personalizados para cada disciplina
+✅ Componentização eficiente
+✅ Estilização modular
 
 🛠 Métodos JavaScript Utilizados
 
