@@ -80,7 +80,6 @@ export function App() {
         );
         return (
           <section key={category} className={styles.container_app}>
-            {/* Exibe o botão APENAS UMA VEZ por categoria */}
             <Button
               colorButton={categoryData.colorButton}
               className={styles.category_button}

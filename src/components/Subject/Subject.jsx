@@ -10,7 +10,7 @@ export const Subject = ({ name, video, description, colorBorder }) => {
   const youtubeEmbedUrl = video ? getYouTubeEmbedUrl(video) : null;
 
   return (
-    <div className={styles.subject_container}>
+    <div className={styles.container_subject}>
       <section
         className={styles.subject}
         style={{ "--borderColor": colorBorder || "#FFFFFF" }}

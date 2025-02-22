@@ -3,7 +3,7 @@ import styles from './Card.module.css';
 
 export const Card = ({ content }) => {
   return (
-    <section className={styles.card}>
+    <section className={styles.container_card}>
       <Subject
         key={content.id}
         name={content.category}

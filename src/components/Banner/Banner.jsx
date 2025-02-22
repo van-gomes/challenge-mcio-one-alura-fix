@@ -3,7 +3,7 @@ import styles from './Banner.module.css';
 
 export const Banner = () => {
   return (
-    <section className={styles.container__banner}>
+    <section className={styles.container_banner}>
         <img src={banner} alt="Banner" />
     </section> 
   );

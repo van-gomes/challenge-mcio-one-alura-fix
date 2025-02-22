@@ -2,7 +2,7 @@ import styles from './DropdownList.module.css';
 
 export const DropdownList = ({ label, itens, value, aoAlterado, obrigatorio = false }) => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container_dropdown_list}>
       <label>{label}</label>
       <select required={obrigatorio} value={value} onChange={evento => aoAlterado(evento.target.value)}>
           <option value=""></option>
