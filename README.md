@@ -34,9 +34,13 @@ Acesse no navegador: http://localhost:5173/
 📌 Funcionalidades Implementadas
 
 ✅ Exibição dinâmica das disciplinas
+
 ✅ Interface responsiva
+
 ✅ Botões personalizados para cada disciplina
+
 ✅ Componentização eficiente
+
 ✅ Estilização modular
 
 🛠 Métodos JavaScript Utilizados
