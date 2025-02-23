@@ -18,16 +18,16 @@ ________________________________________________________________________________
 
 📦 Instalação e Execução
 
-1️⃣ Clone o repositório
+1️Clone o repositório
 
 git clone https://github.com/seu-usuario/challenge-mcio-one-alura.git
 cd challenge-mcio-one-alura
 
-2️⃣ Instale as dependências
+2️Instale as dependências
 
 npm install
 
-3️⃣ Execute o projeto
+3️Execute o projeto
 
 npm run dev
 
