@@ -5,15 +5,15 @@ ________________________________________________________________________________
 
 🚀 Tecnologias Utilizadas
 
-React — Biblioteca JavaScript para criação de interfaces dinâmicas.
+- React — Biblioteca JavaScript para criação de interfaces dinâmicas.
 
-Vite — Ferramenta para build e desenvolvimento rápido.
+- Vite — Ferramenta para build e desenvolvimento rápido.
 
-CSS Modules — Estilização modular para melhor organização dos estilos.
+- CSS Modules — Estilização modular para melhor organização dos estilos.
 
-ESLint — Padronização do código.
+- ESLint — Padronização do código.
 
-JavaScript ES6+ — Uso de arrow functions, destructuring, import/export, entre outros.
+- JavaScript ES6+ — Uso de arrow functions, destructuring, import/export, entre outros.
 __________________________________________________________________________________________________________________________________________________________
 
 📦 Instalação e Execução
@@ -36,39 +36,39 @@ ________________________________________________________________________________
 
 📌 Funcionalidades Implementadas
 
-✅ Exibição dinâmica das disciplinas
+- Exibição dinâmica das disciplinas
 
-✅ Interface responsiva
+- Interface responsiva
 
-✅ Botões personalizados para cada disciplina
+- Botões personalizados para cada disciplina
 
-✅ Componentização eficiente
+- Componentização eficiente
 
-✅ Estilização modular
+- Estilização modular
 __________________________________________________________________________________________________________________________________________________________
 
 🛠 Métodos JavaScript Utilizados
 
-Arrays (map) — Para renderizar os cards dinâmicos.
+- Arrays (map) — Para renderizar os cards dinâmicos.
 
-Manipulação de Estado (useState) — Para gerenciar dados dentro dos componentes.
+- Manipulação de Estado (useState) — Para gerenciar dados dentro dos componentes.
 
-Funções de Callback — Utilizadas para comunicação entre componentes.
+- Funções de Callback — Utilizadas para comunicação entre componentes.
 __________________________________________________________________________________________________________________________________________________________
 
 🤝 Contribuição
 
 Sinta-se à vontade para contribuir com melhorias! Para isso:
 
-Faça um fork do projeto.
+- Faça um fork do projeto.
 
-Crie uma branch com a nova funcionalidade (git checkout -b minha-feature).
+- Crie uma branch com a nova funcionalidade (git checkout -b minha-feature).
 
-Faça commit das alterações (git commit -m 'Adicionei uma nova funcionalidade').
+- Faça commit das alterações (git commit -m 'Adicionei uma nova funcionalidade').
 
-Envie para o repositório (git push origin minha-feature).
+- Envie para o repositório (git push origin minha-feature).
 
-Abra um Pull Request.
+- Abra um Pull Request.
 
 __________________________________________________________________________________________________________________________________________________________
 
