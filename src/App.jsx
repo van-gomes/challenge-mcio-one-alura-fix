@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { Banner } from './components/Banner';
-import { Footer } from './components/Footer';
+import { Banner } from './components/Banner/Banner';
+import { Footer } from './components/Footer/Footer';
 import { Form } from './components/Form/Form';
 import { Header } from './components/Header/Header';
 import { Card } from './components/Card/Card';
@@ -59,14 +59,13 @@ export function App() {
     }
   };
 
-  // Agrupa os vídeos por categoria
-  const groupedContents = contents.reduce((acc, content) => {
-    if (!acc[content.category]) {
-      acc[content.category] = [];
+  const videosByCategory = contents.reduce((categories, video) => {
+    if (!categories[video.category]) {
+        categories[video.category] = [];
     }
-    acc[content.category].push(content);
-    return acc;
-  }, {});
+    categories[video.category].push(video);
+    return categories;
+}, {});
 
   return (
     <>
@@ -74,7 +73,7 @@ export function App() {
       <Banner />
       <Form subjects={subjects} onRegister={onRegister} />
 
-      {Object.entries(groupedContents).map(([category, videos]) => {
+      {Object.entries(videosByCategory).map(([category, videos]) => {
         const categoryData = subjects.find(
           (subject) => subject.category === category
         );
