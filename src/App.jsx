@@ -62,6 +62,18 @@ export function App() {
       title: "Teste",
       video: "https://www.youtube.com/live/jfKfPfyJRdk?feature=shared",
       description: "Teste",
+      category: "Front-end",
+    },
+    {
+      title: "Teste",
+      video: "https://www.youtube.com/live/jfKfPfyJRdk?feature=shared",
+      description: "Teste",
+      category: "Back-end",
+    },
+    {
+      title: "Teste",
+      video: "https://www.youtube.com/live/jfKfPfyJRdk?feature=shared",
+      description: "Teste",
       category: "Back-end",
     },
     {
@@ -106,6 +118,12 @@ export function App() {
       description: "Teste",
       category: "Mobile",
     },
+    {
+      title: "Teste",
+      video: "https://www.youtube.com/live/jfKfPfyJRdk?feature=shared",
+      description: "Teste",
+      category: "Mobile",
+    }
   ]);
 
   const onRegister = (content) => {
