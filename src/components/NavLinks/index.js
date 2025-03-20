@@ -1,2 +1,2 @@
-import NavLinks from '../NavLinks';
+import { NavLinks } from '../NavLinks';
 export default NavLinks;
