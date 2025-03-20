@@ -1,12 +1,12 @@
-import { useState } from 'react';
-import { Banner } from './components/Banner/Banner';
-import { Footer } from './components/Footer/Footer';
-import { Form } from './components/Form/Form';
-import { Header } from './components/Header/Header';
-import { Card } from './components/Card/Card';
-import Button from './components/Button';
-import styles from './App.module.css';
-import '../src/global.css';
+import { useState } from "react";
+import { Banner } from "./components/Banner/Banner";
+import { Footer } from "./components/Footer/Footer";
+import { Form } from "./components/Form/Form";
+import { Header } from "./components/Header/Header";
+import { Card } from "./components/Card/Card";
+import Button from "./components/Button";
+import styles from "./App.module.css";
+import "../src/global.css";
 
 export function App() {
   const subjects = [
@@ -33,7 +33,80 @@ export function App() {
     },
   ];
 
-  const [contents, setContents] = useState([]);
+  const [contents, setContents] = useState([
+    {
+      title: "Teste",
+      video: "https://www.youtube.com/live/jfKfPfyJRdk?feature=shared",
+      description: "Teste",
+      category: "Front-end",
+    },
+    {
+      title: "Teste",
+      video: "https://www.youtube.com/live/jfKfPfyJRdk?feature=shared",
+      description: "Teste",
+      category: "Front-end",
+    },
+    {
+      title: "Teste",
+      video: "https://www.youtube.com/live/jfKfPfyJRdk?feature=shared",
+      description: "Teste",
+      category: "Front-end",
+    },
+    {
+      title: "Teste",
+      video: "https://www.youtube.com/live/jfKfPfyJRdk?feature=shared",
+      description: "Teste",
+      category: "Front-end",
+    },
+    {
+      title: "Teste",
+      video: "https://www.youtube.com/live/jfKfPfyJRdk?feature=shared",
+      description: "Teste",
+      category: "Back-end",
+    },
+    {
+      title: "Teste",
+      video: "https://www.youtube.com/live/jfKfPfyJRdk?feature=shared",
+      description: "Teste",
+      category: "Back-end",
+    },
+    {
+      title: "Teste",
+      video: "https://www.youtube.com/live/jfKfPfyJRdk?feature=shared",
+      description: "Teste",
+      category: "Back-end",
+    },
+    {
+      title: "Teste",
+      video: "https://www.youtube.com/live/jfKfPfyJRdk?feature=shared",
+      description: "Teste",
+      category: "Back-end",
+    },
+    {
+      title: "Teste",
+      video: "https://www.youtube.com/live/jfKfPfyJRdk?feature=shared",
+      description: "Teste",
+      category: "Mobile",
+    },
+    {
+      title: "Teste",
+      video: "https://www.youtube.com/live/jfKfPfyJRdk?feature=shared",
+      description: "Teste",
+      category: "Mobile",
+    },
+    {
+      title: "Teste",
+      video: "https://www.youtube.com/live/jfKfPfyJRdk?feature=shared",
+      description: "Teste",
+      category: "Mobile",
+    },
+    {
+      title: "Teste",
+      video: "https://www.youtube.com/live/jfKfPfyJRdk?feature=shared",
+      description: "Teste",
+      category: "Mobile",
+    },
+  ]);
 
   const onRegister = (content) => {
     console.log("Cadastrando...", content);
@@ -61,11 +134,11 @@ export function App() {
 
   const videosByCategory = contents.reduce((categories, video) => {
     if (!categories[video.category]) {
-        categories[video.category] = [];
+      categories[video.category] = [];
     }
     categories[video.category].push(video);
     return categories;
-}, {});
+  }, {});
 
   return (
     <>
