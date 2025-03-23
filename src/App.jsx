@@ -35,95 +35,112 @@ export function App() {
 
   const [contents, setContents] = useState([
     {
-      title: "Teste",
-      video: "https://www.youtube.com/live/jfKfPfyJRdk?feature=shared",
-      description: "Teste",
+      title: "Curso Completo de Desenvolvimento Web Front-End",
+      video: "https://www.youtube.com/watch?v=evgkOl-nScA",
+      description:
+        "Este curso completo de 10 horas aborda desde os fundamentos até tópicos avançados de desenvolvimento web front-end.",
       category: "Front-end",
     },
     {
-      title: "Teste",
-      video: "https://www.youtube.com/live/jfKfPfyJRdk?feature=shared",
-      description: "Teste",
+      title: "Programador Front-end Iniciante - APRENDA ISSO!",
+      video: "https://www.youtube.com/watch?v=fX5WCe3d8WU",
+      description:
+        "Dicas essenciais para iniciantes que desejam se tornar programadores front-end.",
       category: "Front-end",
     },
     {
-      title: "Teste",
-      video: "https://www.youtube.com/live/jfKfPfyJRdk?feature=shared",
-      description: "Teste",
+      title: "The Complete Frontend Developer Roadmap",
+      video: "https://www.youtube.com/watch?v=Tef1e9FiSR0",
+      description:
+        "Um guia completo sobre as habilidades e tecnologias necessárias para se tornar um desenvolvedor front-end em 2025.",
       category: "Front-end",
     },
     {
-      title: "Teste",
-      video: "https://www.youtube.com/live/jfKfPfyJRdk?feature=shared",
-      description: "Teste",
+      title: "Front-end, Back-end e Full stack - Curso em Vídeo HTML5 e CSS3",
+      video: "https://www.youtube.com/watch?v=iSqf2iPqJNM",
+      description:
+        "Entenda as diferenças entre desenvolvimento front-end, back-end e full stack neste vídeo do Curso em Vídeo.",
       category: "Front-end",
     },
     {
-      title: "Teste",
-      video: "https://www.youtube.com/live/jfKfPfyJRdk?feature=shared",
-      description: "Teste",
+      title: "Caminhos para ser um dev front-end em 2023",
+      video: "https://www.youtube.com/watch?v=30nlBGjPRYM",
+      description:
+        "Exploração das tecnologias e tendências para quem deseja iniciar no desenvolvimento front-end em 2023.",
       category: "Front-end",
     },
+
     {
-      title: "Teste",
-      video: "https://www.youtube.com/live/jfKfPfyJRdk?feature=shared",
-      description: "Teste",
+      title: "O Que É Desenvolvimento Backend?",
+      video: "https://www.youtube.com/watch?v=bXM54XHQC5I",
+      description:
+        "Uma visão geral sobre o que é desenvolvimento back-end e suas principais funções.",
       category: "Back-end",
     },
     {
-      title: "Teste",
-      video: "https://www.youtube.com/live/jfKfPfyJRdk?feature=shared",
-      description: "Teste",
+      title: "Como Se Tornar Um Desenvolvedor Backend? (Passo A Passo)",
+      video: "https://www.youtube.com/watch?v=wXMlMsDvk2M",
+      description:
+        "Guia passo a passo para quem deseja iniciar na carreira de desenvolvimento back-end.",
       category: "Back-end",
     },
     {
-      title: "Teste",
-      video: "https://www.youtube.com/live/jfKfPfyJRdk?feature=shared",
-      description: "Teste",
+      title: "Back-End: Tudo o que você precisa saber sobre a área!",
+      video: "https://www.youtube.com/watch?v=G4Z_9cunSeg",
+      description:
+        "Explicação completa sobre a área de back-end e suas responsabilidades.",
       category: "Back-end",
     },
     {
-      title: "Teste",
-      video: "https://www.youtube.com/live/jfKfPfyJRdk?feature=shared",
-      description: "Teste",
+      title:
+        "Rotina Dev: Saiba O que um Desenvolvedor Back-End faz no seu dia-a-dia",
+      video: "https://www.youtube.com/watch?v=xiPM_2aWtUc",
+      description:
+        "Detalhes sobre a rotina diária de um desenvolvedor back-end.",
       category: "Back-end",
     },
     {
-      title: "Teste",
-      video: "https://www.youtube.com/live/jfKfPfyJRdk?feature=shared",
-      description: "Teste",
+      title: "Programador Backend: Roadmap para Dev Júnior 2025",
+      video: "https://www.youtube.com/watch?v=CfoyVY1CJRk",
+      description:
+        "Roadmap atualizado para quem deseja se tornar um desenvolvedor back-end júnior em 2025.",
       category: "Back-end",
     },
     {
-      title: "Teste",
-      video: "https://www.youtube.com/live/jfKfPfyJRdk?feature=shared",
-      description: "Teste",
+      title: "Como iniciar em Desenvolvimento Mobile? O que estudar?",
+      video: "https://www.youtube.com/watch?v=QGTyIWTCCmY",
+      description:
+        "Passo a passo para quem deseja iniciar na carreira de desenvolvimento mobile e o que deve estudar.",
       category: "Mobile",
     },
     {
-      title: "Teste",
-      video: "https://www.youtube.com/live/jfKfPfyJRdk?feature=shared",
-      description: "Teste",
+      title: "Dia 1 – Introdução ao Desenvolvimento Mobile",
+      video: "https://www.youtube.com/watch?v=yW2kgxan140",
+      description:
+        "Introdução ao desenvolvimento mobile, abordando os primeiros passos na área.",
       category: "Mobile",
     },
     {
-      title: "Teste",
-      video: "https://www.youtube.com/live/jfKfPfyJRdk?feature=shared",
-      description: "Teste",
+      title: "O que eu faço hoje como Desenvolvedor Mobile",
+      video: "https://www.youtube.com/watch?v=xU2r-dSdN1o",
+      description:
+        "Descrição das atividades diárias de um desenvolvedor mobile.",
       category: "Mobile",
     },
     {
-      title: "Teste",
-      video: "https://www.youtube.com/live/jfKfPfyJRdk?feature=shared",
-      description: "Teste",
+      title: "Como se tornar um Desenvolvedor Mobile em 2024",
+      video: "https://www.youtube.com/watch?v=COY5vTa778g",
+      description:
+        "Dicas e orientações para se tornar um desenvolvedor mobile em 2024.",
       category: "Mobile",
     },
     {
-      title: "Teste",
-      video: "https://www.youtube.com/live/jfKfPfyJRdk?feature=shared",
-      description: "Teste",
+      title: "Como começar no desenvolvimento Mobile",
+      video: "https://www.youtube.com/watch?v=H5eB4a0Wnas",
+      description:
+        "Orientações sobre os primeiros passos e as melhores dicas para iniciar no desenvolvimento mobile.",
       category: "Mobile",
-    }
+    },
   ]);
 
   const onRegister = (content) => {

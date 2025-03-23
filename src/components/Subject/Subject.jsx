@@ -1,8 +1,9 @@
-import styles from './Subject.module.css';
+import styles from "./Subject.module.css";
 
-export const Subject = ({ name, video, description, colorBorder }) => {
+export const Subject = ({ name, video, description, colorBorder, title }) => {
   const getYouTubeEmbedUrl = (url) => {
-    const regex = /(?:youtube\.com\/(?:watch\?v=|live\/)|youtu\.be\/|youtube\.com\/live\/)([a-zA-Z0-9_-]{11})/;
+    const regex =
+      /(?:youtube\.com\/(?:watch\?v=|live\/)|youtu\.be\/|youtube\.com\/live\/)([a-zA-Z0-9_-]{11})/;
     const match = url.match(regex);
     return match ? `https://www.youtube.com/embed/${match[1]}` : null;
   };
@@ -26,8 +27,11 @@ export const Subject = ({ name, video, description, colorBorder }) => {
             <p className={styles.noMedia}>Nenhuma mídia disponível</p>
           )}
         </div>
-        <p>{description}</p>
+        <div className={styles.video_content}>
+          <p className={styles.video_title}>{title}</p>
+          <p className={styles.video_description}>{description}</p>
+        </div>
       </section>
     </div>
   );
-}
+};

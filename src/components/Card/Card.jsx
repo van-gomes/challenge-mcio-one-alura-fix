@@ -7,6 +7,7 @@ export const Card = ({ content }) => {
       <Subject
         key={content.id}
         name={content.category}
+        title={content.title}
         video={content.video}
         description={content.description}
         colorBorder={content.colorBorder}
