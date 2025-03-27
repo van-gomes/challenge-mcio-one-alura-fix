@@ -1,5 +1,5 @@
 import styles from "./Subject.module.css";
-import { FaEdit } from "react-icons/fa";
+import iconEdit from "../../assets/icons/icon_edit.png";
 
 export const Subject = ({ name, video, description, colorBorder, title }) => {
   const getYouTubeEmbedUrl = (url) => {
@@ -31,15 +31,9 @@ export const Subject = ({ name, video, description, colorBorder, title }) => {
         <div className={styles.video_content}>
           <p className={styles.video_title}>{title}</p>
           <p className={styles.video_description}>{description}</p>
-
-          <div className={styles.container_edit_icon}>
-          <span
-            className={styles.edit_span}
-            onClick={() => console.log("Editar vídeo")}
-          >
-            <FaEdit />
+          <span className={styles.container_edit}>
+            <img className={styles.edit} src={iconEdit} alt="Icone de editar" />
           </span>
-          </div>
         </div>
       </section>
     </div>

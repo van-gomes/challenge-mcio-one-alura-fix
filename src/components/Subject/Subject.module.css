@@ -1,4 +1,5 @@
-.container_subject, .subject {
+.container_subject,
+.subject {
   display: flex;
 }
 
@@ -39,7 +40,7 @@
 
 .video_title {
   height: 60px;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   font-weight: bold;
 }
 
@@ -50,6 +51,20 @@
 .video_title,
 .video_description {
   color: #ffffff;
+}
+
+.container_edit {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.edit {
+  color: #fff;
+  background-color: #fff;
+  width: 1.3rem;
+  border: none;
+  margin-top: -10rem;
 }
 
 @media screen and (max-width: 768px) {
