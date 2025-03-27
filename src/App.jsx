@@ -15,6 +15,7 @@ export function App() {
       name: "Front-end",
       colorButton: "#6BD1FF",
       colorBorder: "#6BD1FF",
+      colorIconEdit:"#6BD1FF",
       category: "Front-end",
     },
     {
@@ -22,6 +23,7 @@ export function App() {
       name: "Back-end",
       colorButton: "#00C86F",
       colorBorder: "#00C86F",
+      colorIconEdit: "#00C86F",
       category: "Back-end",
     },
     {
@@ -29,6 +31,7 @@ export function App() {
       name: "Mobile",
       colorButton: "#FFBA05",
       colorBorder: "#FFBA05",
+      colorIconEdit:"#FFBA05",
       category: "Mobile",
     },
   ];

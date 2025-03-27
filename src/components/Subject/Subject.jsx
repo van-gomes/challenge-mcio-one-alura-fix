@@ -1,7 +1,7 @@
 import styles from "./Subject.module.css";
-import iconEdit from "../../assets/icons/icon_edit.png";
+import { MdEdit } from "react-icons/md";
 
-export const Subject = ({ name, video, description, colorBorder, title }) => {
+export const Subject = ({ name, colorBorder, colorIconEdit, description, title, video }) => {
   const getYouTubeEmbedUrl = (url) => {
     const regex =
       /(?:youtube\.com\/(?:watch\?v=|live\/)|youtu\.be\/|youtube\.com\/live\/)([a-zA-Z0-9_-]{11})/;
@@ -32,7 +32,7 @@ export const Subject = ({ name, video, description, colorBorder, title }) => {
           <p className={styles.video_title}>{title}</p>
           <p className={styles.video_description}>{description}</p>
           <span className={styles.container_edit}>
-            <img className={styles.edit} src={iconEdit} alt="Icone de editar" />
+            <MdEdit style={{"--iconEditColor": colorIconEdit}} className={styles.md_edit} />
           </span>
         </div>
       </section>
