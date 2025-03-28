@@ -1,7 +1,14 @@
 import styles from "./Subject.module.css";
 import { MdEdit } from "react-icons/md";
 
-export const Subject = ({ name, colorBorder, colorIconEdit, description, title, video }) => {
+export const Subject = ({
+  name,
+  colorBorder,
+  colorIconEdit,
+  description,
+  title,
+  video,
+}) => {
   const getYouTubeEmbedUrl = (url) => {
     const regex =
       /(?:youtube\.com\/(?:watch\?v=|live\/)|youtu\.be\/|youtube\.com\/live\/)([a-zA-Z0-9_-]{11})/;
@@ -14,8 +21,11 @@ export const Subject = ({ name, colorBorder, colorIconEdit, description, title, 
   return (
     <div className={styles.container_subject}>
       <section
-        className={styles.subject}
-        style={{ "--borderColor": colorBorder || "#FFFFFF" }}
+          className={styles.container_subject}
+          style={{
+           borderColor: colorBorder,
+           colorIconEdit: colorIconEdit
+          }}
       >
         <div className={styles.container_video}>
           {youtubeEmbedUrl ? (
@@ -32,7 +42,7 @@ export const Subject = ({ name, colorBorder, colorIconEdit, description, title, 
           <p className={styles.video_title}>{title}</p>
           <p className={styles.video_description}>{description}</p>
           <span className={styles.container_edit}>
-            <MdEdit style={{"--iconEditColor": colorIconEdit}} className={styles.md_edit} />
+          <MdEdit style={{ "--iconEditColor": colorIconEdit }} className={styles.md_edit} />
           </span>
         </div>
       </section>

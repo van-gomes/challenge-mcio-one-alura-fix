@@ -162,6 +162,7 @@ export function App() {
         description: content.description,
         colorButton: categoryData.colorButton,
         colorBorder: categoryData.colorBorder,
+        colorIconEdit: categoryData.colorIconEdit,
       };
 
       setContents([...contents, newContent]);
