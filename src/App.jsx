@@ -15,7 +15,7 @@ export function App() {
       name: "Front-end",
       colorButton: "#6BD1FF",
       colorBorder: "#6BD1FF",
-      colorIconEdit:"#6BD1FF",
+      colorIconEdit: "#6BD1FF",
       category: "Front-end",
     },
     {
@@ -31,7 +31,7 @@ export function App() {
       name: "Mobile",
       colorButton: "#FFBA05",
       colorBorder: "#FFBA05",
-      colorIconEdit:"#FFBA05",
+      colorIconEdit: "#FFBA05",
       category: "Mobile",
     },
   ];
@@ -43,6 +43,8 @@ export function App() {
       description:
         "Este curso completo de 10 horas aborda desde os fundamentos até tópicos avançados de desenvolvimento web front-end.",
       category: "Front-end",
+      colorBorder: "#6BD1FF",
+      colorIconEdit: "#6BD1FF",
     },
     {
       title: "Programador Front-end Iniciante - APRENDA ISSO!",

@@ -1,15 +1,15 @@
 import { Subject } from "../Subject/Subject";
 
-export const Card = ({ content, colorBorder }) => {
+export const Card = ({ content }) => {
   return (
-    <section style={{ boderColor: colorBorder}}>
+    <section>
       <Subject
         name={content.category}
-        colorBorder={content.colorBorder}
-        colorIconEdit={content.colorIconEdit}
         title={content.title}
         video={content.video}
         description={content.description}
+        colorBorder={content.colorBorder}
+        colorIconEdit={content.colorIconEdit}
       />
     </section>
   );

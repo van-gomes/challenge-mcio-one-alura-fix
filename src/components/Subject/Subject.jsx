@@ -20,14 +20,13 @@ export const Subject = ({
 
   return (
     <div className={styles.container_subject}>
-      <section
-          className={styles.container_subject}
+      <section className={styles.container_subject}>
+        <div
+          className={styles.container_video}
           style={{
-           borderColor: colorBorder,
-           colorIconEdit: colorIconEdit
+            borderColor: colorBorder,
           }}
-      >
-        <div className={styles.container_video}>
+        >
           {youtubeEmbedUrl ? (
             <iframe
               src={youtubeEmbedUrl}
@@ -42,7 +41,10 @@ export const Subject = ({
           <p className={styles.video_title}>{title}</p>
           <p className={styles.video_description}>{description}</p>
           <span className={styles.container_edit}>
-          <MdEdit style={{ "--iconEditColor": colorIconEdit }} className={styles.md_edit} />
+            <MdEdit
+              style={{ color: colorIconEdit }}
+              className={styles.md_edit}
+            />
           </span>
         </div>
       </section>
