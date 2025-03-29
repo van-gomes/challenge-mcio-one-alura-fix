@@ -52,6 +52,8 @@ export function App() {
       description:
         "Dicas essenciais para iniciantes que desejam se tornar programadores front-end.",
       category: "Front-end",
+      colorBorder: "#6BD1FF",
+      colorIconEdit: "#6BD1FF",
     },
     {
       title: "The Complete Frontend Developer Roadmap",
@@ -59,6 +61,8 @@ export function App() {
       description:
         "Um guia completo sobre as habilidades e tecnologias necessárias para se tornar um desenvolvedor front-end em 2025.",
       category: "Front-end",
+      colorBorder: "#6BD1FF",
+      colorIconEdit: "#6BD1FF",
     },
     {
       title: "Front-end, Back-end e Full stack - Curso em Vídeo HTML5 e CSS3",
@@ -66,6 +70,8 @@ export function App() {
       description:
         "Entenda as diferenças entre desenvolvimento front-end, back-end e full stack neste vídeo do Curso em Vídeo.",
       category: "Front-end",
+      colorBorder: "#6BD1FF",
+      colorIconEdit: "#6BD1FF",
     },
     {
       title: "Caminhos para ser um dev front-end em 2023",
@@ -73,6 +79,8 @@ export function App() {
       description:
         "Exploração das tecnologias e tendências para quem deseja iniciar no desenvolvimento front-end em 2023.",
       category: "Front-end",
+      colorBorder: "#6BD1FF",
+      colorIconEdit: "#6BD1FF",
     },
 
     {
@@ -81,6 +89,8 @@ export function App() {
       description:
         "Uma visão geral sobre o que é desenvolvimento back-end e suas principais funções.",
       category: "Back-end",
+      colorBorder: "#00C86F",
+      colorIconEdit: "#00C86F",
     },
     {
       title: "Como Se Tornar Um Desenvolvedor Backend? (Passo A Passo)",
@@ -88,6 +98,8 @@ export function App() {
       description:
         "Guia passo a passo para quem deseja iniciar na carreira de desenvolvimento back-end.",
       category: "Back-end",
+      colorBorder: "#00C86F",
+      colorIconEdit: "#00C86F",
     },
     {
       title: "Back-End: Tudo o que você precisa saber sobre a área!",
@@ -95,6 +107,8 @@ export function App() {
       description:
         "Explicação completa sobre a área de back-end e suas responsabilidades.",
       category: "Back-end",
+      colorBorder: "#00C86F",
+      colorIconEdit: "#00C86F",
     },
     {
       title:
@@ -103,6 +117,8 @@ export function App() {
       description:
         "Detalhes sobre a rotina diária de um desenvolvedor back-end.",
       category: "Back-end",
+      colorBorder: "#00C86F",
+      colorIconEdit: "#00C86F",
     },
     {
       title: "Programador Backend: Roadmap para Dev Júnior 2025",
@@ -110,6 +126,8 @@ export function App() {
       description:
         "Roadmap atualizado para quem deseja se tornar um desenvolvedor back-end júnior em 2025.",
       category: "Back-end",
+      colorBorder: "#00C86F",
+      colorIconEdit: "#00C86F",
     },
     {
       title: "Como iniciar em Desenvolvimento Mobile? O que estudar?",
@@ -117,6 +135,8 @@ export function App() {
       description:
         "Passo a passo para quem deseja iniciar na carreira de desenvolvimento mobile e o que deve estudar.",
       category: "Mobile",
+      colorBorder: "#FFBA05",
+      colorIconEdit: "#FFBA05",
     },
     {
       title: "Dia 1 – Introdução ao Desenvolvimento Mobile",
@@ -124,6 +144,8 @@ export function App() {
       description:
         "Introdução ao desenvolvimento mobile, abordando os primeiros passos na área.",
       category: "Mobile",
+      colorBorder: "#FFBA05",
+      colorIconEdit: "#FFBA05",
     },
     {
       title: "O que eu faço hoje como Desenvolvedor Mobile",
@@ -131,6 +153,8 @@ export function App() {
       description:
         "Descrição das atividades diárias de um desenvolvedor mobile.",
       category: "Mobile",
+      colorBorder: "#FFBA05",
+      colorIconEdit: "#FFBA05",
     },
     {
       title: "Como se tornar um Desenvolvedor Mobile em 2024",
@@ -138,6 +162,8 @@ export function App() {
       description:
         "Dicas e orientações para se tornar um desenvolvedor mobile em 2024.",
       category: "Mobile",
+      colorBorder: "#FFBA05",
+      colorIconEdit: "#FFBA05",
     },
     {
       title: "Como começar no desenvolvimento Mobile",
@@ -145,6 +171,8 @@ export function App() {
       description:
         "Orientações sobre os primeiros passos e as melhores dicas para iniciar no desenvolvimento mobile.",
       category: "Mobile",
+      colorBorder: "#FFBA05",
+      colorIconEdit: "#FFBA05",
     },
   ]);
 
