@@ -57,13 +57,17 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  margin-top: -4.2rem;
 }
 
 .md_edit {
   color: inherit;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   border: none;
   margin-top: -20rem;
+  border: 1px solid;
+  padding: .2rem;
+  border-radius: .3px;
 }
 
 @media screen and (max-width: 768px) {
