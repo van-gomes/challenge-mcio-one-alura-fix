@@ -23,8 +23,23 @@
 
 .video_app {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 1.25rem;
   margin: 0 4rem;
+}
+
+@media screen and (max-width: 530px) {
+  .category_button {
+    width: 12.5rem;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .video_app {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
 }
