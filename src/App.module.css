@@ -29,3 +29,17 @@
   gap: 1.25rem;
   margin: 0 4rem;
 }
+
+@media (min-width: 530px) {
+  .video_app {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 769px) {
+  .video_app {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
