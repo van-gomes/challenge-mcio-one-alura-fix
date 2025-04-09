@@ -30,7 +30,7 @@
   margin: 0 4rem;
 }
 
-@media (min-width: 500px) {
+/* @media (min-width: 500px) {
 .category_button {
   margin-left: 6rem;
 }
@@ -52,4 +52,4 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
-}
+} */
