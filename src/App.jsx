@@ -9,6 +9,8 @@ import styles from "./App.module.css";
 import "../src/global.css";
 
 export function App() {
+  const [editingData, setEditingData] = useState(null);
+
   const subjects = [
     {
       id: 1,
@@ -38,6 +40,7 @@ export function App() {
 
   const [contents, setContents] = useState([
     {
+      id: "1",
       title: "Curso Completo de Desenvolvimento Web Front-End",
       video: "https://www.youtube.com/watch?v=evgkOl-nScA",
       description:
@@ -47,6 +50,7 @@ export function App() {
       colorIconEdit: "#6BD1FF",
     },
     {
+      id: "2",
       title: "Programador Front-end Iniciante - APRENDA ISSO!",
       video: "https://www.youtube.com/watch?v=fX5WCe3d8WU",
       description:
@@ -56,6 +60,7 @@ export function App() {
       colorIconEdit: "#6BD1FF",
     },
     {
+      id: "3",
       title: "The Complete Frontend Developer Roadmap",
       video: "https://www.youtube.com/watch?v=Tef1e9FiSR0",
       description:
@@ -65,6 +70,7 @@ export function App() {
       colorIconEdit: "#6BD1FF",
     },
     {
+      id: "4",
       title: "Front-end, Back-end e Full stack - Curso em Vídeo HTML5 e CSS3",
       video: "https://www.youtube.com/watch?v=iSqf2iPqJNM",
       description:
@@ -74,6 +80,7 @@ export function App() {
       colorIconEdit: "#6BD1FF",
     },
     {
+      id: "5",
       title: "Caminhos para ser um dev front-end em 2023",
       video: "https://www.youtube.com/watch?v=30nlBGjPRYM",
       description:
@@ -82,8 +89,8 @@ export function App() {
       colorBorder: "#6BD1FF",
       colorIconEdit: "#6BD1FF",
     },
-
     {
+      id: "6",
       title: "O Que É Desenvolvimento Backend?",
       video: "https://www.youtube.com/watch?v=bXM54XHQC5I",
       description:
@@ -93,6 +100,7 @@ export function App() {
       colorIconEdit: "#00C86F",
     },
     {
+      id: "7",
       title: "Como Se Tornar Um Desenvolvedor Backend? (Passo A Passo)",
       video: "https://www.youtube.com/watch?v=wXMlMsDvk2M",
       description:
@@ -102,6 +110,7 @@ export function App() {
       colorIconEdit: "#00C86F",
     },
     {
+      id: "8",
       title: "Back-End: Tudo o que você precisa saber sobre a área!",
       video: "https://www.youtube.com/watch?v=G4Z_9cunSeg",
       description:
@@ -111,6 +120,7 @@ export function App() {
       colorIconEdit: "#00C86F",
     },
     {
+      id: "9",
       title:
         "Rotina Dev: Saiba O que um Desenvolvedor Back-End faz no seu dia-a-dia",
       video: "https://www.youtube.com/watch?v=xiPM_2aWtUc",
@@ -121,6 +131,7 @@ export function App() {
       colorIconEdit: "#00C86F",
     },
     {
+      id: "10",
       title: "Programador Backend: Roadmap para Dev Júnior 2025",
       video: "https://www.youtube.com/watch?v=CfoyVY1CJRk",
       description:
@@ -130,6 +141,7 @@ export function App() {
       colorIconEdit: "#00C86F",
     },
     {
+      id: "11",
       title: "Como iniciar em Desenvolvimento Mobile? O que estudar?",
       video: "https://www.youtube.com/watch?v=QGTyIWTCCmY",
       description:
@@ -139,6 +151,7 @@ export function App() {
       colorIconEdit: "#FFBA05",
     },
     {
+      id: "12",
       title: "Dia 1 – Introdução ao Desenvolvimento Mobile",
       video: "https://www.youtube.com/watch?v=yW2kgxan140",
       description:
@@ -148,6 +161,7 @@ export function App() {
       colorIconEdit: "#FFBA05",
     },
     {
+      id: "13",
       title: "O que eu faço hoje como Desenvolvedor Mobile",
       video: "https://www.youtube.com/watch?v=xU2r-dSdN1o",
       description:
@@ -157,6 +171,7 @@ export function App() {
       colorIconEdit: "#FFBA05",
     },
     {
+      id: "14",
       title: "Como se tornar um Desenvolvedor Mobile em 2024",
       video: "https://www.youtube.com/watch?v=COY5vTa778g",
       description:
@@ -166,6 +181,7 @@ export function App() {
       colorIconEdit: "#FFBA05",
     },
     {
+      id: "15",
       title: "Como começar no desenvolvimento Mobile",
       video: "https://www.youtube.com/watch?v=H5eB4a0Wnas",
       description:
@@ -175,6 +191,15 @@ export function App() {
       colorIconEdit: "#FFBA05",
     },
   ]);
+
+  const handleEdit = (updatedVideo) => {
+    setContents((prevContents) =>
+      prevContents.map((video) =>
+        video.id === updatedVideo.id ? updatedVideo : video
+      )
+    );
+    setEditingData(null);
+  };  
 
   const onRegister = (content) => {
     console.log("Cadastrando...", content);
@@ -213,7 +238,12 @@ export function App() {
     <>
       <Header />
       <Banner />
-      <Form subjects={subjects} onRegister={onRegister} />
+      <Form
+        subjects={subjects}
+        onRegister={onRegister}
+        onEdit={handleEdit}
+        editingData={editingData}
+      />
 
       {Object.entries(videosByCategory).map(([category, videos]) => {
         const categoryData = subjects.find(
@@ -229,7 +259,11 @@ export function App() {
             </Button>
             <div className={styles.video_app}>
               {videos.map((content) => (
-                <Card key={content.id} content={content} />
+                <Card
+                  key={content.id}
+                  content={content}
+                  onEditClick={setEditingData}
+                />
               ))}
             </div>
           </section>

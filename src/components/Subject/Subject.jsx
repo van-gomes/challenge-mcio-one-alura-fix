@@ -8,6 +8,7 @@ export const Subject = ({
   description,
   title,
   video,
+  onEdit
 }) => {
   const getYouTubeEmbedUrl = (url) => {
     const regex =
@@ -44,6 +45,7 @@ export const Subject = ({
             <MdEdit
               style={{ color: colorIconEdit }}
               className={styles.md_edit}
+              onClick={onEdit}
             />
           </span>
         </div>

@@ -40,7 +40,7 @@ export const Form = ({ onRegister, subjects, editingData, onEdit }) => {
     };
 
     if (editingData) {
-      onEdit({ ...formData, id: editingData.id }); // ou outra propriedade identificadora
+      onEdit({ ...formData, id: editingData.id });
     } else {
       onRegister(formData);
     }
