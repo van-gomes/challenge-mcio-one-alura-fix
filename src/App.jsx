@@ -199,7 +199,7 @@ export function App() {
       )
     );
     setEditingData(null);
-  };  
+  };
 
   const onRegister = (content) => {
     console.log("Cadastrando...", content);
