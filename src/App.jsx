@@ -4,7 +4,7 @@ import { Footer } from "./components/Footer/Footer";
 import { Form } from "./components/Form/Form";
 import { Header } from "./components/Header/Header";
 import { Card } from "./components/Card/Card";
-import Button from "./components/Button";
+import { Button } from "./components/Button";
 import styles from "./App.module.css";
 import "../src/global.css";
 
