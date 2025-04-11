@@ -4,7 +4,9 @@ import { Footer } from "./components/Footer/Footer";
 import { Form } from "./components/Form/Form";
 import { Header } from "./components/Header/Header";
 import { Card } from "./components/Card/Card";
-import { Button } from "./components/Button";
+import { Button } from "./components/Button/Button";
+import { Modal } from "./components/Modal/Modal";
+
 import styles from "./App.module.css";
 import "../src/global.css";
 
@@ -238,12 +240,26 @@ export function App() {
     <>
       <Header />
       <Banner />
-      <Form
-        subjects={subjects}
-        onRegister={onRegister}
-        onEdit={handleEdit}
-        editingData={editingData}
-      />
+      {editingData ? (
+        <Modal isOpen={true} onClose={() => setEditingData(null)}>
+          <Form
+            subjects={subjects}
+            onRegister={onRegister}
+            onEdit={(data) => {
+              handleEdit(data);
+              setEditingData(null);
+            }}
+            editingData={editingData}
+          />
+        </Modal>
+      ) : (
+        <Form
+          subjects={subjects}
+          onRegister={onRegister}
+          onEdit={handleEdit}
+          editingData={null}
+        />
+      )}
 
       {Object.entries(videosByCategory).map(([category, videos]) => {
         const categoryData = subjects.find(
