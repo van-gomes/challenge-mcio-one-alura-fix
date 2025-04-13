@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { useState, useEffect } from "react";
 import Button from "../Button";
 import { DropdownList } from "../DropdownList/DropdownList";

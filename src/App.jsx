@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { useState } from "react";
 import { Banner } from "./components/Banner/Banner";
 import { Footer } from "./components/Footer/Footer";
@@ -204,8 +205,6 @@ export function App() {
   };
 
   const onRegister = (content) => {
-    console.log("Cadastrando...", content);
-
     const categoryData = subjects.find(
       (subject) => subject.category === content.category
     );
