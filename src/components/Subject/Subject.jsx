@@ -1,5 +1,5 @@
 import styles from "./Subject.module.css";
-import { MdEdit } from "react-icons/md";
+import { MdEdit, MdDelete } from "react-icons/md";
 
 export const Subject = ({
   name,
@@ -44,8 +44,12 @@ export const Subject = ({
           <span className={styles.container_edit}>
             <MdEdit
               style={{ color: colorIconEdit }}
-              className={styles.md_edit}
+              className={styles.md_icon}
               onClick={onEdit}
+            />
+            <MdDelete 
+              style={{ color: colorIconEdit }}
+              className={styles.md_icon}
             />
           </span>
         </div>
