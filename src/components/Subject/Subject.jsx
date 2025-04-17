@@ -8,7 +8,8 @@ export const Subject = ({
   description,
   title,
   video,
-  onEdit
+  onEdit,
+  onDelete
 }) => {
   const getYouTubeEmbedUrl = (url) => {
     const regex =
@@ -25,7 +26,7 @@ export const Subject = ({
         <div
           className={styles.container_video}
           style={{
-            borderColor: colorBorder,
+            borderColor: colorBorder
           }}
         >
           {youtubeEmbedUrl ? (
@@ -50,6 +51,7 @@ export const Subject = ({
             <MdDelete 
               style={{ color: colorIconEdit }}
               className={styles.md_icon}
+              onClick={onDelete}
             />
           </span>
         </div>

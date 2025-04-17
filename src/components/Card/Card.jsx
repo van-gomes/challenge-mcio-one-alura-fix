@@ -1,6 +1,6 @@
 import { Subject } from "../Subject/Subject";
 
-export const Card = ({ content, onEditClick }) => {
+export const Card = ({ content, onEditClick, onDeleteClick }) => {
   return (
     <section>
       <Subject
@@ -10,7 +10,8 @@ export const Card = ({ content, onEditClick }) => {
         description={content.description}
         colorBorder={content.colorBorder}
         colorIconEdit={content.colorIconEdit}
-        onEdit={() => onEditClick(content)} 
+        onEdit={() => onEditClick(content)}
+        onDelete={() => onDeleteClick(content.id)}
       />
     </section>
   );

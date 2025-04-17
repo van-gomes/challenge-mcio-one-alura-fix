@@ -204,6 +204,10 @@ export function App() {
     setEditingData(null);
   };
 
+  const handleDelete = (id) => {
+    setContents((prevContents) => prevContents.filter((video) => video.id !== id));
+  };  
+
   const onRegister = (content) => {
     const categoryData = subjects.find(
       (subject) => subject.category === content.category
@@ -278,6 +282,7 @@ export function App() {
                   key={content.id}
                   content={content}
                   onEditClick={setEditingData}
+                  onDeleteClick={handleDelete}
                 />
               ))}
             </div>
