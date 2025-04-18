@@ -50,7 +50,8 @@
 }
 
 .video_description {
-  height: 150px;
+  height: 9.375rem;
+  margin-top: 1.3rem;
 }
 
 .video_title,
@@ -62,7 +63,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-top: -4.2rem;
+  margin-top: -3.7rem;
 }
 
 .md_icon {
