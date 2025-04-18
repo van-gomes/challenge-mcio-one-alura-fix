@@ -196,17 +196,29 @@ export function App() {
   ]);
 
   const handleEdit = (updatedVideo) => {
+    const categoryData = subjects.find(
+      (subject) => subject.category === updatedVideo.category
+    );
+
+    const updatedVideoWithColors = {
+      ...updatedVideo,
+      colorBorder: categoryData?.colorBorder || updatedVideo.colorBorder,
+      colorIconEdit: categoryData?.colorIconEdit || updatedVideo.colorIconEdit,
+    };
+
     setContents((prevContents) =>
       prevContents.map((video) =>
-        video.id === updatedVideo.id ? updatedVideo : video
+        video.id === updatedVideo.id ? updatedVideoWithColors : video
       )
     );
     setEditingData(null);
   };
 
   const handleDelete = (id) => {
-    setContents((prevContents) => prevContents.filter((video) => video.id !== id));
-  };  
+    setContents((prevContents) =>
+      prevContents.filter((video) => video.id !== id)
+    );
+  };
 
   const onRegister = (content) => {
     const categoryData = subjects.find(
